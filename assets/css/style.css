@@ -41,7 +41,7 @@
 
 .social {
   margin: 0 auto;
-  text-align: center;
+  text-align: inherit;
 }
 
 .icon-btn {
@@ -199,37 +199,38 @@ ul.table-of-contents li:not(.logo) a:hover {
 }
 
 /* ===============================
-   HEADER (ABOUT SECTION)
+   INTRO SECTION
    =============================== */
-.intro-header {
-  margin-top: 80px;
-  margin-bottom: 40px;
-  text-align: center;
+#intro.section {
+  background: var(--primary-color) repeat;
+  position: relative;
 }
 
-.name-title {
-  font-size: 2.8rem;
-  font-weight: 700;
-  color: var(--primary-color);
-  margin-bottom: 10px;
+#intro.section .container {
+  color: var(--white);
+  font-weight: 200;
+  position: absolute;
+  top: 0;
+  left: 0;
 }
 
-.name-subtitle {
-  font-size: 1.2rem;
-  font-weight: 400;
-  color: #546e7a;
-  margin-bottom: 20px;
+#intro.section .container *:not(span) {
+  font-weight: 300;
+  line-height: 150%;
+  text-shadow: 1px 1px 5px rgba(13, 57, 78, 0.5);
 }
 
-.divider {
-  width: 60px;
-  height: 3px;
-  background-color: var(--primary-color);
-  margin: 0 auto 40px;
+.overlay {
+  background-color: rgba(0, 0, 0, 0.4);
+  height: 100%;
+  left: 0;
+  top: 0;
+  position: absolute;
+  width: 100%;
 }
 
 /* ===============================
-   CARD & SECTION CONTENT
+   CARDS & CONTENT
    =============================== */
 .card {
   margin-bottom: 60px;
@@ -255,11 +256,6 @@ ul.table-of-contents li:not(.logo) a:hover {
   margin-left: 24px;
 }
 
-.section {
-  padding-bottom: 30px;
-  position: relative;
-}
-
 /* ===============================
    EXPERIENCE, SKILLS, CONTACT
    =============================== */
@@ -280,10 +276,6 @@ ul.table-of-contents li:not(.logo) a:hover {
   position: relative;
   bottom: 6px;
   left: 20px;
-}
-
-#contact .social {
-  margin-top: 20px;
 }
 
 /* ===============================
@@ -315,8 +307,8 @@ ul.table-of-contents li:not(.logo) a:hover {
     font-size: 22px;
   }
 
-  .name-subtitle {
-    font-size: 16px;
+  .name-title span {
+    font-size: 14px;
   }
 
   h3 {
@@ -330,6 +322,10 @@ ul.table-of-contents li:not(.logo) a:hover {
     font-size: 22px;
     line-height: 200%;
     margin: 30px 0 0;
+  }
+
+  #intro.section .container *:not(span) {
+    padding: 0;
   }
 
   #contact a:not(.btn-floating) {

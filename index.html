@@ -1,32 +1,26 @@
 <!DOCTYPE html>
 <html lang="en">
->
+<head>
   <meta charset="utf-8" />
-  <meta name="viewport" content="width=device-width initial-scale=1" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
   <meta http-equiv="X-UA-Compatible" content="IE=edge" />
 
-  <title>Yucel Yavuz | AI Data Scientist</title>
-
-  <!-- Materialize -->
-  <link rel="stylesheet" href="//cdnjs.cloudflare.com/ajax/libs/materialize/0.95.3/css/materialize.min.css" />
+  <!-- Materialize CSS -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/0.95.3/css/materialize.min.css" />
   <!-- Font Awesome -->
-  <link rel="stylesheet" href="//maxcdn.bootstrapcdn.com/font-awesome/4.3.0/css/font-awesome.min.css" />
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.3.0/css/font-awesome.min.css" />
   <!-- Custom Styles -->
   <link rel="stylesheet" href="/assets/css/style.css" />
 
+  <title>Yucel Yavuz | AI Data Scientist</title>
+
   <!-- SEO -->
   <meta name="author" content="Yucel Yavuz" />
-  <meta name="description" content="Portfolio of Yucel Yavuz — AI Data Scientist specializing in Generative AI, SHAP explainability, and LLM-powered marketing analytics and decision automation." />
-  <meta name="keywords" content="Yucel Yavuz, AI Data Scientist, Generative AI, SHAP, LangChain, LangGraph, Streamlit, Databricks, Snowflake, Python, Machine Learning, Horizon Media, Data Science" />
-
-  <!-- Open Graph -->
+  <meta name="description" content="AI Data Scientist specializing in Generative AI, SHAP explainability, and LLM-powered analytics." />
+  <meta name="keywords" content="Yucel Yavuz, AI Data Scientist, Generative AI, SHAP, LangChain, Databricks, Snowflake, Python, Machine Learning, Horizon Media" />
   <meta property="og:title" content="Yucel Yavuz | AI Data Scientist" />
-  <meta property="og:description" content="Innovative AI Data Scientist building interpretable and generative AI systems for marketing, analytics, and decision automation." />
   <meta property="og:url" content="https://yucel-yavuz.github.io/" />
   <meta property="og:image" content="https://yucel-yavuz.github.io/assets/img/preview.png" />
-
-  <!-- Icons -->
-  <link rel="icon" type="image/png" sizes="32x32" href="/assets/img/favicon/favicon-32x32.png" />
   <meta name="theme-color" content="#0d394e" />
 </head>
 
@@ -35,18 +29,22 @@
   <nav class="hide-on-small-only">
     <ul class="side-nav fixed section table-of-contents">
       <li class="logo">
-        <a id="logo-container" href="#about" class="brand-logo grey-blue-text">
-          <img src="/assets/img/passport-new.jpg" class="circle img-responsive profile-pic" alt="avatar">
+        <a href="#intro" class="brand-logo">
+          <img src="/assets/img/passport-new.jpg" class="circle img-responsive profile-pic" alt="Yucel Yavuz portrait">
         </a>
       </li>
-
-      <li class="bold"><a href="#about" class="waves-effect waves-dark teal-text"><i class="mdi-social-person small"></i><span>About</span></a></li>
-      <li class="bold"><a href="#experience" class="waves-effect waves-dark teal-text"><i class="mdi-action-trending-up small"></i><span>Experience</span></a></li>
-      <li class="bold"><a href="#projects" class="waves-effect waves-dark teal-text"><i class="mdi-av-my-library-books small"></i><span>Projects</span></a></li>
-      <li class="bold"><a href="#skills" class="waves-effect waves-dark teal-text"><i class="mdi-action-assessment small"></i><span>Skills</span></a></li>
-      <li class="bold"><a href="#education" class="waves-effect waves-dark teal-text"><i class="mdi-social-school small"></i><span>Education & Certifications</span></a></li>
-      <li class="bold"><a href="#contact" class="waves-effect waves-dark teal-text"><i class="mdi-content-mail small"></i><span>Contact</span></a></li>
-      <li class="bold"><a href="/assets/resume/Yucel_Yavuz_Resume.pdf" target="_blank" class="waves-effect waves-dark teal-text"><i class="mdi-file-folder-open small"></i><span>Resume</span></a></li>
+      <li class="bold"><a href="#about" class="waves-effect waves-dark teal-text"><i class="mdi-social-person small"></i>About</a></li>
+      <li class="bold"><a href="#experience" class="waves-effect waves-dark teal-text"><i class="mdi-action-trending-up small"></i>Experience</a></li>
+      <li class="bold"><a href="#projects" class="waves-effect waves-dark teal-text"><i class="mdi-av-my-library-books small"></i>Projects</a></li>
+      <li class="bold"><a href="#skills" class="waves-effect waves-dark teal-text"><i class="mdi-action-assessment small"></i>Skills</a></li>
+      <li class="bold">
+        <a href="#education" class="waves-effect waves-dark teal-text">
+          <i class="mdi-social-school small"></i>
+          <span style="display:inline-block; line-height:1.1em;">Education &<br>Certifications</span>
+        </a>
+      </li>
+      <li class="bold"><a href="#contact" class="waves-effect waves-dark teal-text"><i class="mdi-content-mail small"></i>Contact</a></li>
+      <li class="bold"><a href="/assets/resume/Yucel_Yavuz_Resume.pdf" target="_blank" class="waves-effect waves-dark teal-text"><i class="mdi-file-folder-open small"></i>Resume</a></li>
     </ul>
   </nav>
 
@@ -54,7 +52,7 @@
   <nav class="hide-on-large only trigger z-depth-1">
     <a href="#" data-activates="slide-out" class="button-collapse"><i class="mdi-navigation-menu"></i></a>
     <div class="name-title">
-      <a id="name" href="#" class="teal-text">Yucel Yavuz</a>
+      <a href="#" class="teal-text">Yucel Yavuz</a>
       <span class="black-text">AI Data Scientist</span>
     </div>
   </nav>
@@ -62,78 +60,90 @@
   <!-- Mobile Drawer -->
   <nav class="hide-on-large only">
     <ul id="slide-out" class="side-nav">
-      <li class="bold"><a href="#about" class="waves-effect waves-dark teal-text"><i class="mdi-social-person small"></i><span>About</span></a></li>
-      <li class="bold"><a href="#experience" class="waves-effect waves-dark teal-text"><i class="mdi-action-trending-up small"></i><span>Experience</span></a></li>
-      <li class="bold"><a href="#projects" class="waves-effect waves-dark teal-text"><i class="mdi-av-my-library-books small"></i><span>Projects</span></a></li>
-      <li class="bold"><a href="#skills" class="waves-effect waves-dark teal-text"><i class="mdi-action-assessment small"></i><span>Skills</span></a></li>
-      <li class="bold"><a href="#education" class="waves-effect waves-dark teal-text"><i class="mdi-social-school small"></i><span>Education & Certifications</span></a></li>
-      <li class="bold"><a href="#contact" class="waves-effect waves-dark teal-text"><i class="mdi-content-mail small"></i><span>Contact</span></a></li>
-      <li class="bold"><a href="/assets/resume/Yucel_Yavuz_Resume.pdf" target="_blank" class="waves-effect waves-dark teal-text"><i class="mdi-file-folder-open small"></i><span>Resume</span></a></li>
+      <li><a href="#about" class="waves-effect teal-text"><i class="mdi-social-person small"></i>About</a></li>
+      <li><a href="#experience" class="waves-effect teal-text"><i class="mdi-action-trending-up small"></i>Experience</a></li>
+      <li><a href="#projects" class="waves-effect teal-text"><i class="mdi-av-my-library-books small"></i>Projects</a></li>
+      <li><a href="#skills" class="waves-effect teal-text"><i class="mdi-action-assessment small"></i>Skills</a></li>
+      <li>
+        <a href="#education" class="waves-effect teal-text">
+          <i class="mdi-social-school small"></i>
+          <span style="display:inline-block; line-height:1.1em;">Education &<br>Certifications</span>
+        </a>
+      </li>
+      <li><a href="#contact" class="waves-effect teal-text"><i class="mdi-content-mail small"></i>Contact</a></li>
+      <li><a href="/assets/resume/Yucel_Yavuz_Resume.pdf" target="_blank" class="waves-effect teal-text"><i class="mdi-file-folder-open small"></i>Resume</a></li>
     </ul>
   </nav>
 
-  <!-- MAIN CONTENT -->
+  <!-- Main -->
   <main>
-
-    <!-- ABOUT SECTION -->
-    <section id="about" class="section scrollspy">
-      <div class="container">
-        <div class="intro-header center-align">
-          <h1 class="name-title">Yucel Yavuz</h1>
-          <h5 class="name-subtitle">
-            AI Data Scientist | Generative AI Practitioner | Machine Learning Specialist
-          </h5>
-          <div class="divider"></div>
+    <!-- INTRO -->
+    <section id="intro" class="section scrollspy full-height" style="background:#0d394e; color:white;">
+      <div class="container center-align" style="margin-top:100px;">
+        <h2 style="font-weight:700;">Hi, I'm <span class="teal-text text-lighten-2">Yucel Yavuz</span></h2>
+        <h5 class="typing" style="font-weight:300; color:#fff;"></h5>
+        <p class="flow-text" style="max-width:750px;margin:auto;">
+          AI Data Scientist | Generative AI Practitioner | Machine Learning Specialist passionate about building
+          intelligent, explainable, and data-driven systems that drive measurable business impact.
+        </p>
+        <div style="margin-top:30px;">
+          <a href="https://linkedin.com/in/yucyavuz" target="_blank" class="btn-floating btn-large blue-grey"><i class="fa fa-linkedin"></i></a>
+          <a href="https://github.com/yucel-yavuz" target="_blank" class="btn-floating btn-large blue-grey"><i class="fa fa-github"></i></a>
         </div>
-
-        <h3 class="page-title teal-text">About</h3>
-        <div class="flow-text">
-          <p>
-            Innovative and results-oriented <b>AI Data Scientist</b> with <b>5+ years</b> of expertise in 
-            <b>machine learning, data analytics, and Python-based modeling</b>, complemented by <b>10+ years</b> 
-            of cross-functional leadership experience. Skilled in developing and deploying advanced AI solutions, 
-            including <b>LLM-powered agents</b> for media planning, <b>SQL automation</b>, 
-            <b>document summarization</b>, and <b>sentiment analysis</b>.
-          </p>
-
-          <p>
-            Proficient in leveraging <b>Python</b> (Scikit-Learn, XGBoost, SHAP), 
-            big data platforms (<b>Databricks, Snowflake</b>), and BI tools (<b>Tableau, Power BI</b>) 
-            to translate complex data into actionable business insights. Adept at applying 
-            <b>interpretable models</b>, <b>SHAP analysis</b>, and <b>Generative AI</b> 
-            to drive strategic decision-making and measurable impact.
-          </p>
+        <div style="margin-top:40px;">
+          <a href="#about" class="btn teal lighten-1">Read More</a>
+          <a href="#contact" class="btn white teal-text">Contact Me</a>
         </div>
       </div>
     </section>
 
-    <!-- EXPERIENCE SECTION -->
+    <!-- ABOUT -->
+    <section id="about" class="section scrollspy">
+      <h3 class="page-title white-text teal">About</h3>
+      <div class="container flow-text">
+        <p>
+          Innovative and results-oriented <b>AI Data Scientist</b> with <b>5+ years</b> of expertise in <b>machine learning, data analytics, and Python-based modeling</b>, complemented by <b>10+ years</b> of cross-functional leadership experience. Skilled in developing and deploying advanced AI solutions, including <b>LLM-powered agents</b> for media planning, <b>SQL automation</b>, <b>document summarization</b>, and <b>sentiment analysis</b>.
+        </p>
+        <p>
+          Proficient in leveraging <b>Python</b> (Scikit-Learn, XGBoost, SHAP), big data platforms (<b>Databricks</b>, <b>Snowflake</b>, SQL), and BI tools (<b>Tableau</b>, <b>Power BI</b>) to translate complex data into actionable business insights. Adept at applying <b>interpretable models</b>, <b>SHAP analysis</b>, and <b>Generative AI</b> to drive strategic decision-making and measurable impact.
+        </p>
+      </div>
+    </section>
+
+    <!-- EXPERIENCE -->
     <section id="experience" class="section scrollspy">
       <h3 class="page-title white-text teal">Experience</h3>
       <div class="container">
-
-        <!-- Horizon Media -->
+        <!-- Horizon -->
         <div class="card">
           <div class="card-content">
-            <div class="role brown-text text-darken-2">AI Data Scientist | Generative AI</div>
-            <span class="card-title teal-text">Horizon Media — New York, NY</span>
-            <ul>
-              <li>Leveraged <b>LLMs</b> (LangChain, Streamlit, Snowflake Cortex) to interpret demographic & behavioral data—accelerating decisions by <b>35%</b> and reducing manual reporting by <b>40%</b>.</li>
-              <li>Developed <b>SHAP-driven interpretable AI frameworks</b> to enhance model transparency and stakeholder confidence.</li>
-              <li>Engineered <b>Databricks + Snowflake</b> pipelines achieving <b>92% accuracy</b> for look-alike & LTV models, improving campaign efficiency by <b>15%</b>.</li>
-            </ul>
+            <div class="row">
+              <div class="col s12 m2">
+                <img src="/assets/img/exp-zhiffy-logo-1.webp" alt="Horizon Media logo" class="responsive-img center-block">
+              </div>
+              <div class="col s12 m10">
+                <span class="card-title teal-text hoverline"><b>Horizon Media — New York, NY</b></span>
+                <div class="role brown-text text-darken-2">AI Data Scientist | Generative AI</div>
+                <ul>
+                  <li>Leveraged <b>LLMs</b> (LangChain, Streamlit, Snowflake Cortex) to interpret demographic & behavioral data—<b>accelerating decisions by 35%</b> and <b>reducing manual reporting by 40%</b>.</li>
+                  <li>Developed <b>SHAP-driven interpretable AI frameworks</b> improving model transparency and stakeholder confidence.</li>
+                  <li>Built <b>Databricks + Snowflake</b> pipelines using XGBoost, achieving <b>92% accuracy</b> and boosting campaign efficiency by <b>15%</b>.</li>
+                </ul>
+              </div>
+            </div>
           </div>
           <div class="card-action"><span>Apr 2023 – Present</span></div>
         </div>
 
-        <!-- Bowery Farming -->
+        <!-- Bowery -->
         <div class="card">
           <div class="card-content">
+            <span class="card-title teal-text hoverline"><b>Bowery Farming — Kearny, NJ</b></span>
             <div class="role brown-text text-darken-2">Data Scientist | Operations Manager</div>
-            <span class="card-title teal-text">Bowery Farming — Kearny, NJ</span>
             <ul>
-              <li>Built <b>data analytics dashboard</b> that increased productivity by <b>25%</b>.</li>
-              <li>Created <b>yield prediction ML model</b> boosting forecast accuracy by <b>10%</b>.</li>
+              <li>Built a <b>data analytics dashboard</b> that increased productivity by <b>25%</b>.</li>
+              <li>Introduced ML-driven <b>yield prediction models</b> improving accuracy by <b>10%</b>.</li>
+              <li>Achieved <b>98–99% SQF</b> audit results three consecutive years.</li>
             </ul>
           </div>
           <div class="card-action"><span>Sep 2018 – Apr 2023</span></div>
@@ -141,68 +151,145 @@
       </div>
     </section>
 
-    <!-- PROJECTS SECTION -->
+    <!-- PROJECTS -->
     <section id="projects" class="section scrollspy">
       <h3 class="page-title white-text teal">Projects</h3>
       <div class="container">
-        <ul>
-          <li><b>Marketing AI CoPilot:</b> Built multi-agent LangGraph system integrating BI, SQL, and GenAI agents for automated media analytics.</li>
-          <li><b>Sentiment Analyzer:</b> Streamlit app using OpenAI + YouTube API for product sentiment analysis with interactive charts.</li>
-          <li><b>SHAP Analyzer:</b> Databricks ML pipeline generating SHAP beeswarm charts for explainability of marketing models.</li>
-        </ul>
+        <div class="row">
+          <div class="col s12 m6 l4">
+            <div class="card medium">
+              <div class="card-image">
+                <img src="/assets/img/project-aim_bert-bias.png" alt="AI Media Planning Copilot">
+              </div>
+              <div class="card-content">
+                <span class="card-title teal-text hoverline">AI Media Planning Copilot</span>
+                <p>LangGraph multi-agent workflow for automated insights and chart generation.</p>
+              </div>
+              <div class="card-action">
+                <a href="https://github.com/yucel-yavuz" target="_blank" class="btn-floating btn-large blue-grey"><i class="fa fa-github"></i></a>
+              </div>
+            </div>
+          </div>
+
+          <div class="col s12 m6 l4">
+            <div class="card medium">
+              <div class="card-image">
+                <img src="/assets/img/project-blog-logo.jpg" alt="YouTube Sentiment Analyzer">
+              </div>
+              <div class="card-content">
+                <span class="card-title teal-text hoverline">YouTube Sentiment Analyzer</span>
+                <p>Streamlit chatbot analyzing product sentiment with LLM-assisted moderation.</p>
+              </div>
+              <div class="card-action">
+                <a href="https://github.com/yucel-yavuz" target="_blank" class="btn-floating btn-large blue-grey"><i class="fa fa-github"></i></a>
+              </div>
+            </div>
+          </div>
+
+          <div class="col s12 m6 l4">
+            <div class="card medium">
+              <div class="card-image">
+                <img src="/assets/img/computer-vision-v2-04.png" alt="SHAP Interpretability Engine">
+              </div>
+              <div class="card-content">
+                <span class="card-title teal-text hoverline">SHAP Interpretability Engine</span>
+                <p>Explainable ML framework for global & local driver analysis of purchase models.</p>
+              </div>
+              <div class="card-action">
+                <a href="https://github.com/yucel-yavuz" target="_blank" class="btn-floating btn-large blue-grey"><i class="fa fa-github"></i></a>
+              </div>
+            </div>
+          </div>
+        </div>
       </div>
     </section>
 
-    <!-- SKILLS SECTION -->
+    <!-- SKILLS -->
     <section id="skills" class="section scrollspy">
       <h3 class="page-title white-text teal">Skills</h3>
       <div class="container">
-        <p><b>AI, Machine Learning & Advanced Analytics:</b> Generative AI • LangChain • LangGraph • RAG • Snowflake Cortex • SHAP Explainability • Supervised/Unsupervised ML • XGBoost • A/B Testing • Cluster Analysis</p>
-        <p><b>Programming Tools & Platforms:</b> Python • PySpark • SQL • Streamlit • Scikit-Learn • TensorFlow • PyTorch • Databricks • Docker • Git/GitHub</p>
-        <p><b>Data Visualization & BI:</b> Tableau • Power BI • Plotly • Matplotlib • Seaborn</p>
-        <p><b>Leadership & Collaboration:</b> Team Mentorship • Cross-Functional Alignment • Strategic Decision-Making</p>
+        <div class="card"><div class="card-content"><h4>AI, Machine Learning & Advanced Analytics</h4>
+          Generative AI • Agentic AI • LangChain • LangGraph • RAG • SHAP • A/B Testing • XGBoost • PCA • Cluster Analysis
+        </div></div>
+        <div class="card"><div class="card-content"><h4>Programming Tools & Platforms</h4>
+          Python • PySpark • SQL (Snowflake) • Streamlit • Databricks • TensorFlow • Keras • PyTorch • Git/GitHub
+        </div></div>
+        <div class="card"><div class="card-content"><h4>Data Visualization & BI</h4>
+          Tableau • Power BI • Plotly • Matplotlib • Seaborn
+        </div></div>
+        <div class="card"><div class="card-content"><h4>Leadership & Collaboration</h4>
+          Team Coaching • Cross-Functional Collaboration • Strategic Leadership
+        </div></div>
       </div>
     </section>
 
-    <!-- EDUCATION & CERTIFICATIONS -->
+    <!-- EDUCATION -->
     <section id="education" class="section scrollspy">
       <h3 class="page-title white-text teal">Education & Certifications</h3>
       <div class="container">
-        <ul>
-          <li><b>National Defense University, Ankara, Turkey</b> — PhD in Technology Management (Pending)</li>
-          <li><b>Turkish Army War College, Istanbul, Turkey</b> — MA in Organizational Management (GPA: 87.3/100)</li>
-          <li><b>National Defense University, Ankara, Turkey</b> — MSc in Technology Management (GPA: 3.73/4.0)</li>
-          <li><b>National Defense University, Ankara, Turkey</b> — BSc in Systems Engineering (GPA: 3.33/4.0)</li>
-          <br />
-          <li><b>Certifications:</b> Generative AI for Data Scientists (IBM) • Deep Learning with Keras (IBM) • Databricks Mosaic AI (Coursera) • Machine Learning with Python (IBM) • Generative AI Bootcamp (Business Science)</li>
-        </ul>
+        <div class="row">
+          <div class="col s12 m6 l6">
+            <div class="card">
+              <div class="card-content">
+                <h4>Education</h4>
+                <p><b>U.S. Army War College</b> — International Fellows Academic Prep Course</p>
+                <p><b>National Defense University</b> — PhD Education in Technology Management (Pending)</p>
+                <p><b>Turkish Army War College</b> — M.A. in Organizational Management & Leadership (GPA: 87.27/100)</p>
+                <p><b>National Defense University</b> — M.S. in Technology Management (GPA: 3.73/4.00)</p>
+                <p><b>National Defense University</b> — B.S. in Systems Engineering (GPA: 3.33/4.00)</p>
+              </div>
+            </div>
+          </div>
+
+          <div class="col s12 m6 l6">
+            <div class="card">
+              <div class="card-content">
+                <h4>Certifications</h4>
+                <ul class="browser-default">
+                  <li>Generative AI for Data Scientists — IBM</li>
+                  <li>Deep Learning with Keras — IBM</li>
+                  <li>Machine Learning with Python (V2) — IBM</li>
+                  <li>Generative AI Bootcamp — Business Science</li>
+                  <li>Databricks Mosaic AI — Coursera</li>
+                  <li>Certified Management Executive (CME) — MSI</li>
+                </ul>
+              </div>
+            </div>
+          </div>
+        </div>
       </div>
     </section>
 
-    <!-- CONTACT SECTION -->
-    <section id="contact" class="section scrollspy">
+    <!-- CONTACT -->
+    <section id="contact" class="section scrollspy full-height">
       <h3 class="page-title white-text teal">Contact</h3>
-      <div class="container center-align">
-        <p><a href="mailto:yucelyavuz@gmail.com" class="hoverline">yucelyavuz@gmail.com</a></p>
-        <div class="social">
-          <a href="https://github.com/yucel-yavuz" target="_blank" class="icon-btn github"><i class="fa fa-github"></i></a>
-          <a href="https://www.linkedin.com/in/yucyavuz/" target="_blank" class="icon-btn linkedin"><i class="fa fa-linkedin"></i></a>
-        </div>
+      <div class="container">
+        <p><a class="btn-floating btn-large blue-grey"><i class="fa fa-phone"></i></a> +1 (848) 456-7755</p>
+        <p><a href="mailto:yucelyavuz.ai@gmail.com" target="_blank" class="btn-floating btn-large blue-grey"><i class="fa fa-envelope"></i></a>
+          <a href="mailto:yucelyavuz.ai@gmail.com" class="hoverline">yucelyavuz.ai@gmail.com</a></p>
+        <p><a href="https://github.com/yucel-yavuz" target="_blank" class="btn-floating btn-large blue-grey"><i class="fa fa-github"></i></a>
+          <a href="https://github.com/yucel-yavuz" class="hoverline">github.com/yucel-yavuz</a></p>
+        <p><a href="https://linkedin.com/in/yucyavuz" target="_blank" class="btn-floating btn-large blue-grey"><i class="fa fa-linkedin"></i></a>
+          <a href="https://linkedin.com/in/yucyavuz" class="hoverline">linkedin.com/in/yucyavuz</a></p>
       </div>
     </section>
   </main>
 
-  <!-- SCRIPTS -->
+  <!-- Scripts -->
   <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.2/jquery.min.js"></script>
   <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/0.95.3/js/materialize.min.js"></script>
+  <script src="assets/vendor/typed.js/typed.min.js"></script>
   <script>
-    $(document).ready(function () {
+    $(document).ready(function(){
       $(".scrollspy").scrollSpy();
-      $(".button-collapse").sideNav({
-        menuWidth: 190,
-        edge: "left",
-        closeOnClick: true
-      });
+      $(".button-collapse").sideNav({menuWidth:190, edge:"left", closeOnClick:true});
+    });
+
+    var typed = new Typed('.typing',{
+      strings: ["AI Data Scientist", "Generative AI Practitioner", "Machine Learning Specialist", "Data Storyteller"],
+      loop: true,
+      typeSpeed: 80,
+      backSpeed: 40
     });
   </script>
 </body>

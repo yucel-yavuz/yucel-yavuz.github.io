@@ -1,19 +1,20 @@
 .profile-pic {
   position: relative;
-  max-width:130px;
-  max-height:130px;
-  width: auto;
-  height: auto;
-  overflow: visible;
-  margin: 0 auto;
-  margin-top: 10px;
+  max-width: 130px;
+  max-height: 130px;
+  width: 130px;
+  height: 130px;
+  overflow: hidden;
+  margin: 15px auto;
   border: 6px solid rgba(13, 57, 78, 0.4);  /* replaced rgba(0,77,64,0.4) */
   border-radius: 50% !important;
+  display: block;
 }
 
 .profile-pic img {
   width: 100%;
-  height: auto;
+  height: 100%;
+  object-fit: cover;
 }
 
 .tracker {
@@ -162,7 +163,7 @@ ul.side-nav.fixed li.logo {
   border-bottom: 1px solid #ddd;
   box-sizing: content-box;
   min-height: 90px;
-  padding: 20px 30px 30px;
+  padding: 25px 30px 30px;
 }
 
 ul.side-nav.fixed li.logo a {
@@ -519,16 +520,86 @@ ul.side-nav li {
 }
 
 /* Experience section improvements */
+#experience .card {
+  box-shadow: 0 2px 8px rgba(0,0,0,0.1);
+}
+
 #experience .card-content {
-  padding: 25px 30px !important;
+  padding: 20px !important;
+}
+
+#experience .card-header {
+  display: flex;
+  align-items: flex-start;
+  padding-bottom: 15px;
+  border-bottom: 1px solid #eee;
+  margin-bottom: 15px;
+}
+
+#experience .company-logo {
+  width: 50px;
+  min-width: 50px;
+  height: 50px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-right: 15px;
+  background: #f9f9f9;
+  border-radius: 4px;
+  padding: 5px;
+}
+
+#experience .company-logo img {
+  max-width: 40px;
+  max-height: 40px;
+  object-fit: contain;
+}
+
+#experience .company-info {
+  flex: 1;
+}
+
+#experience .company-name {
+  font-size: 1.3rem;
+  font-weight: bold;
+  color: #009688;
+  margin: 0 0 5px 0;
+  line-height: 1.3;
+}
+
+#experience .company-location {
+  color: #757575;
+  font-size: 0.95rem;
+  margin: 0;
+}
+
+#experience .role {
+  color: #5d4037;
+  font-weight: 600;
+  padding: 10px 0;
+  margin: 0 0 15px 0;
+  background: #fafafa;
+  padding: 10px 15px;
+  margin-left: -20px;
+  margin-right: -20px;
 }
 
 #experience .card-content ul {
   padding-left: 25px;
+  margin: 0;
 }
 
 #experience .card-content li {
   margin-bottom: 12px;
   line-height: 1.7;
   font-size: 15px;
+}
+
+#experience .card-action {
+  padding: 10px 20px;
+  background: #fafafa;
+  text-align: right;
+  font-size: 0.9rem;
+  color: #666;
+  border-top: 1px solid #eee;
 }

@@ -520,6 +520,10 @@ ul.side-nav li {
 }
 
 /* Experience section improvements */
+#experience .container {
+  max-width: 1400px !important;
+}
+
 #experience .card {
   box-shadow: 0 2px 8px rgba(0,0,0,0.1) !important;
 }
@@ -567,11 +571,14 @@ ul.side-nav li {
   margin: 0 0 8px 0 !important;
   line-height: 1.2 !important;
   display: block !important;
+  text-transform: none !important;
+  padding: 0 !important;
 }
 
 #experience .company-name a {
   color: #009688 !important;
   text-decoration: none !important;
+  text-transform: none !important;
 }
 
 #experience .company-location {

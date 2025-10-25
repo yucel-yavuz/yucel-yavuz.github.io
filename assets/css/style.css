@@ -558,7 +558,7 @@ ul.side-nav li {
   display: flex !important;
   align-items: center !important;
   justify-content: center !important;
-  margin-right: 20px !important;
+  margin-right: 6px !important;
   background: transparent !important;
   border-radius: 4px !important;
   padding: 8px !important;
@@ -573,9 +573,16 @@ ul.side-nav li {
   box-shadow: none !important;
 }
 
+#experience .teleplan-logo {
+  position: relative !important;
+  left: -4px !important;
+}
+
 #experience .company-info {
   flex: 1 1 auto !important;
   min-width: 0 !important;
+  padding: 0 !important;
+  margin: 0 !important;
 }
 
 #experience .company-name {
@@ -587,6 +594,8 @@ ul.side-nav li {
   display: block !important;
   text-transform: none !important;
   padding: 0 !important;
+  position: relative !important;
+  left: -4px !important;
 }
 
 #experience .company-name a {
@@ -595,18 +604,26 @@ ul.side-nav li {
   text-transform: none !important;
 }
 
+#experience .company-name span {
+  color: #009688 !important;
+  font-weight: 700 !important;
+}
+
 #experience .location-date-row {
   display: flex !important;
   justify-content: space-between !important;
   align-items: center !important;
-  gap: 20px !important;
+  gap: 0 !important;
 }
 
 #experience .company-location {
   color: #666 !important;
   font-size: 0.95rem !important;
   margin: 0 !important;
+  padding: 0 !important;
   font-weight: 400 !important;
+  position: relative !important;
+  left: -3px !important;
 }
 
 #experience .company-date {
@@ -633,10 +650,12 @@ ul.side-nav li {
   color: #666 !important;
   font-size: 0.9rem !important;
   font-weight: 400 !important;
-  margin-left: auto !important;
-  padding-left: 20px !important;
+  margin: 0 !important;
+  padding: 0 !important;
   white-space: nowrap !important;
-  align-self: flex-start !important;
+  text-align: right !important;
+  position: relative !important;
+  right: 14px !important;
 }
 
 #experience .card-content ul {

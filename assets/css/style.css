@@ -678,3 +678,107 @@ ul.side-nav li {
   color: #666 !important;
   border-top: 1px solid #eee !important;
 }
+
+/* Projects section - uniform card sizing */
+#projects .container {
+  max-width: none !important;
+  width: 78% !important;
+  margin-left: 11% !important;
+  margin-right: auto !important;
+}
+
+#projects .row {
+  margin-bottom: 0 !important;
+}
+
+#projects .card,
+#projects .col .card {
+  height: 400px !important;
+  max-height: 400px !important;
+  box-shadow: 0 2px 8px rgba(0,0,0,0.1) !important;
+  box-sizing: border-box !important;
+  margin-bottom: 30px !important;
+  display: flex !important;
+  flex-direction: column !important;
+}
+
+#projects .card-image,
+#projects .card .card-image,
+#projects .card-image.waves-effect,
+#projects .card-image.waves-block,
+#projects .card-image.waves-light {
+  height: 330px !important;
+  min-height: 330px !important;
+  max-height: 330px !important;
+  overflow: hidden !important;
+  position: relative !important;
+  box-sizing: border-box !important;
+  flex-shrink: 0 !important;
+}
+
+#projects .card-image img,
+#projects .card-image video,
+#projects .card .card-image img,
+#projects .card .card-image video {
+  height: 100% !important;
+  width: 100% !important;
+  max-height: 330px !important;
+  object-fit: cover !important;
+  display: block !important;
+}
+
+#projects .card-content,
+#projects .card .card-content {
+  padding: 10px 20px !important;
+  min-height: 70px !important;
+  height: 70px !important;
+  max-height: 70px !important;
+  display: flex !important;
+  align-items: center !important;
+  justify-content: center !important;
+  position: relative !important;
+  box-sizing: border-box !important;
+  overflow: hidden !important;
+  flex-shrink: 0 !important;
+}
+
+#projects .card-title,
+#projects .card-title.activator,
+#projects .card .card-title {
+  font-size: 1.2rem !important;
+  line-height: 1.3 !important;
+  text-align: center !important;
+  display: block !important;
+  font-weight: bold !important;
+  margin: 0 !important;
+  padding: 0 !important;
+}
+
+#projects .card-content .mdi-navigation-more-vert {
+  position: absolute !important;
+  right: 10px !important;
+  top: 50% !important;
+  transform: translateY(-50%) !important;
+  cursor: pointer !important;
+  color: #009688 !important;
+}
+
+/* Projects responsive layout for large screens */
+@media (min-width: 1200px) {
+  #projects .container { width: 90% !important; }
+}
+
+/* Set all project cards to 40% width on desktop/tablet */
+@media (min-width: 601px) {
+  #projects .col.l6,
+  #projects .col.m6 {
+    width: 42.5% !important;
+    margin-left: 5% !important;
+    margin-right: 0 !important;
+  }
+
+  #projects .col.l6:nth-child(2n+1),
+  #projects .col.m6:nth-child(2n+1) {
+    margin-left: 0 !important;
+  }
+}

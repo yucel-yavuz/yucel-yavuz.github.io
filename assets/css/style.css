@@ -768,6 +768,38 @@ ul.side-nav li {
   #projects .container { width: 90% !important; }
 }
 
+/* Skills section - uniform card sizing and reduced margins */
+#skills .container {
+  max-width: none !important;
+  width: 88% !important;
+  margin-left: 6% !important;
+  margin-right: 6% !important;
+}
+
+#skills .row {
+  display: flex !important;
+  flex-wrap: wrap !important;
+}
+
+#skills .col {
+  display: flex !important;
+  flex-direction: column !important;
+}
+
+#skills .card {
+  height: 100% !important;
+  min-height: 320px !important;
+  display: flex !important;
+  flex-direction: column !important;
+  margin-bottom: 20px !important;
+}
+
+#skills .card-content {
+  flex: 1 !important;
+  display: flex !important;
+  flex-direction: column !important;
+}
+
 /* Set all project cards to 40% width on desktop/tablet */
 @media (min-width: 601px) {
   #projects .col.l6,

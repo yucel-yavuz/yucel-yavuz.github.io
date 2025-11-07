@@ -814,3 +814,15 @@ ul.side-nav li {
     margin-left: 0 !important;
   }
 }
+
+/* Education section - wider container */
+#education {
+  padding-bottom: 250px !important;
+}
+
+#education .container {
+  max-width: none !important;
+  width: 88% !important;
+  margin-left: 6% !important;
+  margin-right: 6% !important;
+}

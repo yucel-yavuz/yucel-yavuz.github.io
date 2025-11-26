@@ -1,566 +1,624 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="utf-8" />
-  <meta name="viewport" content="width=device-width initial-scale=1" />
-  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
-
-  <!-- Materialize - Compiled and minified CSS-->
-  <link rel="stylesheet" href="//cdnjs.cloudflare.com/ajax/libs/materialize/0.95.3/css/materialize.min.css" />
-  <!-- Font Awesome Icon - CSS-->
-  <link rel="stylesheet" href="//maxcdn.bootstrapcdn.com/font-awesome/4.3.0/css/font-awesome.min.css" />
-  <!-- Custom Styles-->
-  <link rel="stylesheet" href="/assets/css/style.css" />
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
 
   <title>Yucel Yavuz | AI Data Scientist</title>
 
   <!-- SEO / Social -->
-  <meta name="author" content="Yucel Yavuz" />
-  <meta name="description" content="Portfolio of Yucel Yavuz — AI Data Scientist specializing in Generative AI, SHAP explainability, and LLM-powered marketing analytics and decision automation." />
-  <meta name="keywords" content="Yucel Yavuz, AI Data Scientist, Generative AI, SHAP, LangChain, LangGraph, Streamlit, Databricks, Snowflake, Python, Machine Learning, Horizon Media, Data Science" />
+  <meta name="author" content="Yucel Yavuz">
+  <meta name="description" content="Portfolio of Yucel Yavuz — AI Data Scientist specializing in Generative AI, SHAP explainability, and LLM-powered marketing analytics and decision automation.">
+  <meta name="keywords" content="Yucel Yavuz, AI Data Scientist, Generative AI, SHAP, LangChain, LangGraph, Streamlit, Databricks, Snowflake, Python, Machine Learning, Horizon Media, Data Science">
 
-  <!-- Open Graph-->
-  <meta property="og:locale" content="en_US" />
-  <meta property="og:type" content="website" />
-  <meta property="og:title" content="Yucel Yavuz | AI Data Scientist" />
-  <meta property="og:description" content="Innovative AI Data Scientist building interpretable and generative AI systems for marketing, analytics, and decision automation." />
-  <meta property="og:url" content="https://yucel-yavuz.github.io/" />
-  <meta property="og:site_name" content="Yucel Yavuz | AI Data Scientist" />
-  <meta property="article:publisher" content="https://yucel-yavuz.github.io/" />
-  <meta property="og:image" content="https://yucel-yavuz.github.io/assets/img/preview.png" />
+  <!-- Open Graph -->
+  <meta property="og:locale" content="en_US">
+  <meta property="og:type" content="website">
+  <meta property="og:title" content="Yucel Yavuz | AI Data Scientist">
+  <meta property="og:description" content="Innovative AI Data Scientist building interpretable and generative AI systems for marketing, analytics, and decision automation.">
+  <meta property="og:url" content="https://yucel-yavuz.github.io/">
+  <meta property="og:site_name" content="Yucel Yavuz | AI Data Scientist">
+  <meta property="og:image" content="https://yucel-yavuz.github.io/assets/img/preview.png">
 
   <!-- Twitter -->
-  <meta name="twitter:card" content="summary_large_image" />
-  <meta name="twitter:title" content="Yucel Yavuz | AI Data Scientist" />
-  <meta name="twitter:description" content="AI Data Scientist | Generative AI Practitioner | Machine Learning Specialist" />
-  <meta name="twitter:url" content="https://yucel-yavuz.github.io/" />
+  <meta name="twitter:card" content="summary_large_image">
+  <meta name="twitter:title" content="Yucel Yavuz | AI Data Scientist">
+  <meta name="twitter:description" content="AI Data Scientist | Generative AI Practitioner | Machine Learning Specialist">
+  <meta name="twitter:url" content="https://yucel-yavuz.github.io/">
 
-  <!-- Icons / manifest -->
-  <link rel="apple-touch-icon" sizes="57x57" href="/assets/img/favicon/apple-icon-57x57.png" />
-  <link rel="apple-touch-icon" sizes="60x60" href="/assets/img/favicon/apple-icon-60x60.png" />
-  <link rel="apple-touch-icon" sizes="72x72" href="/assets/img/favicon/apple-icon-72x72.png" />
-  <link rel="apple-touch-icon" sizes="76x76" href="/assets/img/favicon/apple-icon-76x76.png" />
-  <link rel="apple-touch-icon" sizes="114x114" href="/assets/img/favicon/apple-icon-114x114.png" />
-  <link rel="apple-touch-icon" sizes="120x120" href="/assets/img/favicon/apple-icon-120x120.png" />
-  <link rel="apple-touch-icon" sizes="144x144" href="/assets/img/favicon/apple-icon-144x144.png" />
-  <link rel="apple-touch-icon" sizes="152x152" href="/assets/img/favicon/apple-icon-152x152.png" />
-  <link rel="apple-touch-icon" sizes="180x180" href="/assets/img/favicon/apple-icon-180x180.png" />
-  <link rel="icon" type="image/png" sizes="192x192" href="/assets/img/favicon/android-icon-192x192.png" />
-  <link rel="icon" type="image/png" sizes="32x32" href="/assets/img/favicon/favicon-32x32.png" />
-  <link rel="icon" type="image/png" sizes="96x96" href="/assets/img/favicon/favicon-96x96.png" />
-  <link rel="icon" type="image/png" sizes="16x16" href="/assets/img/favicon/favicon-16x16.png" />
-  <link rel="manifest" href="/assets/img/favicon/manifest.json" />
-  <meta name="msapplication-TileColor" content="#ffffff" />
-  <meta name="msapplication-TileImage" content="/assets/img/favicon/ms-icon-144x144.png" />
-  <meta name="theme-color" content="#0d394e" />
-  <meta name="robots" content="index, follow" />
-  <meta name="google-site-verification" content="_qxK8tePiU2fhnwlwnJ7pkDFnj1k2EiKq_cYGy1Cb84" />
+  <!-- Favicon -->
+  <link rel="icon" type="image/png" sizes="32x32" href="../assets/img/favicon/favicon-32x32.png">
+  <link rel="icon" type="image/png" sizes="16x16" href="../assets/img/favicon/favicon-16x16.png">
+  <meta name="theme-color" content="#0d394e">
+
+  <!-- Google Fonts -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&family=Poppins:wght@400;500;600;700&display=swap" rel="stylesheet">
+
+  <!-- Font Awesome -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+
+  <!-- Custom CSS -->
+  <link rel="stylesheet" href="assets/css/style.css">
 </head>
-
 <body>
-  <!-- Navigation Menu-->
-  <!-- Desktop Sidebar -->
-  <nav class="hide-on-small-only">
-    <ul class="side-nav fixed section table-of-contents">
-      <li class="logo">
-        <a id="logo-container" aria-label="Navigate to the beginning of the page" href="#intro" class="brand-logo grey-blue-text">
-          <img src="/assets/img/passport-new.jpg" class="circle img-responsive profile-pic" alt="avatar">
-        </a>
-      </li>
 
-      <li class="bold">
-        <a aria-label="Navigate to the About section" href="#about" class="waves-effect waves-dark teal-text">
-          <i class="mdi-social-person small"></i><span>About</span></a>
-      </li>
+  <!-- Navigation -->
+  <nav id="navbar">
+    <div class="nav-container">
+      <a href="#home" class="nav-logo">YY</a>
 
-      <li class="bold">
-        <a aria-label="Navigate to the Experience section" href="#experience" class="waves-effect waves-dark teal-text">
-          <i class="mdi-action-trending-up small"></i><span>Experience</span></a>
-      </li>
+      <!-- Desktop Menu -->
+      <ul class="nav-menu">
+        <li><a href="#about" class="nav-link">About</a></li>
+        <li><a href="#experience" class="nav-link">Experience</a></li>
+        <li><a href="#projects" class="nav-link">Projects</a></li>
+        <li><a href="#skills" class="nav-link">Skills</a></li>
+        <li><a href="#education" class="nav-link">Education</a></li>
+        <li><a href="#contact" class="nav-link">Contact</a></li>
+        <li><a href="../assets/resume/yucel_yavuz.pdf" target="_blank" class="nav-link nav-resume">Resume</a></li>
+      </ul>
 
-      <li class="bold">
-        <a aria-label="Navigate to the Projects section" href="#projects" class="waves-effect waves-dark teal-text">
-          <i class="mdi-av-my-library-books small"></i><span>Projects</span></a>
-      </li>
+      <!-- Theme Toggle -->
+      <button id="theme-toggle" class="theme-toggle" aria-label="Toggle theme">
+        <i class="fas fa-moon"></i>
+      </button>
 
-      <li class="bold">
-        <a aria-label="Navigate to the Skills section" href="#skills" class="waves-effect waves-dark teal-text">
-          <i class="mdi-action-assessment small"></i><span>Skills</span></a>
-      </li>
-
-      <li class="bold">
-        <a aria-label="Navigate to the Education section" href="#education" class="waves-effect waves-dark teal-text">
-          <i class="mdi-social-school small"></i><span>Education &<br>Certifications</span></a>
-      </li>
-
-      <li class="bold">
-        <a aria-label="Navigate to the Contact section" href="#contact" class="waves-effect waves-dark teal-text">
-          <i class="mdi-content-mail small"></i><span>Contact</span></a>
-      </li>
-
-      <li class="bold">
-        <a aria-label="Open Yucel's resume in a new tab" href="/assets/resume/yucel_yavuz.pdf" target="_blank"
-           class="waves-effect waves-dark teal-text">
-           <i class="mdi-file-folder-open small"></i><span>Resume</span></a>
-      </li>
-    </ul>
-  </nav>
-
-  <!-- Mobile Navbar Title Bar -->
-  <nav class="hide-on-large only trigger z-depth-1">
-    <a aria-label="Toggle visibility of the mobile navbar" href="#" data-activates="slide-out" class="button-collapse">
-      <i class="mdi-navigation-menu"></i></a>
-    <div class="name-title">
-      <a id="name" aria-label="Navigate to the beginning of the page" href="#" class="teal-text">Yucel Yavuz</a>
-      <span class="black-text">AI Data Scientist</span>
+      <!-- Mobile Menu Toggle -->
+      <button class="mobile-menu-toggle" aria-label="Toggle menu">
+        <span></span>
+        <span></span>
+        <span></span>
+      </button>
     </div>
   </nav>
 
-  <!-- Mobile Drawer -->
-  <nav class="hide-on-large only">
-    <ul id="slide-out" class="side-nav">
-      <li class="bold"><a href="#about" class="waves-effect waves-dark teal-text">
-        <i class="mdi-social-person small"></i><span>About</span></a></li>
-      <li class="bold"><a href="#experience" class="waves-effect waves-dark teal-text">
-        <i class="mdi-action-trending-up small"></i><span>Experience</span></a></li>
-      <li class="bold"><a href="#projects" class="waves-effect waves-dark teal-text">
-        <i class="mdi-av-my-library-books small"></i><span>Projects</span></a></li>
-      <li class="bold"><a href="#skills" class="waves-effect waves-dark teal-text">
-        <i class="mdi-action-assessment small"></i><span>Skills</span></a></li>
-      <li class="bold"><a href="#education" class="waves-effect waves-dark teal-text">
-        <i class="mdi-social-school small"></i><span>Education &<br>Certifications</span></a></li>
-      <li class="bold"><a href="#contact" class="waves-effect waves-dark teal-text">
-        <i class="mdi-content-mail small"></i><span>Contact</span></a></li>
-      <li class="bold"><a href="/assets/resume/yucel_yavuz.pdf" target="_blank" class="waves-effect waves-dark teal-text">
-        <i class="mdi-file-folder-open small"></i><span>Resume</span></a></li>
-    </ul>
-  </nav>
+  <!-- Hero Section -->
+  <section id="home" class="hero">
+    <div class="hero-background">
+      <div class="gradient-overlay"></div>
+      <div class="particles-container"></div>
+    </div>
 
-  <!-- Main Content-->
-  <main>
-    <!-- SECTION 2: About -->
-    <section id="about" class="section scrollspy" style="min-height: 100vh; padding-bottom: 100px;">
-      <h3 class="page-title white-text teal">About</h3>
-      <div class="container flow-text">
-        <div class="center-align" style="margin-bottom:18px;">
-          <span style="font-size:2.8rem; font-weight:700; color:#004d60; display:block; margin-bottom:6px;">
-            <b>Yucel Yavuz</b>
-          </span>
-          <span style="font-size:1.4rem; color:#555; display:block; font-weight:700;">
-            <b>AI Data Scientist | Generative AI Practitioner | Machine Learning Specialist</b>
-          </span>
-        </div>
-        <p>
-          Innovative and results-oriented <b>AI Data Scientist</b> with <b>5+ years</b> of expertise in <b>machine learning, data analytics, and Python-based modeling</b>, complemented by <b>10+ years</b> of cross-functional leadership experience. Skilled in developing and deploying advanced AI solutions, including <b>LLM-powered agents</b> for media planning, <b>SQL automation</b>, <b>document summarization</b>, and <b>sentiment analysis</b>.
-        </p>
-        <p>
-          Proficient in leveraging <b>Python</b> (Scikit-Learn, XGBoost, SHAP), big data platforms (<b>Databricks</b>, <b>Snowflake</b>, SQL), and BI tools (<b>Tableau</b>, <b>Power BI</b>) to translate complex data into actionable business insights. Experienced in <b>interpretable modeling</b>, <b>feature-attribution–based explainability</b> (e.g., SHAP), and <b>Generative AI</b> to support strategic decision-making and measurable business impact.
-        </p>
+    <div class="hero-content">
+      <div class="hero-image-container">
+        <img src="../assets/img/passport-new.jpg" alt="Yucel Yavuz" class="hero-image">
       </div>
-    </section>
-    <!-- SECTION 3: Experience -->
-    <section id="experience" class="section scrollspy">
-      <h3 class="page-title white-text teal">Experience</h3>
-      <div class="container">
-        <div class="row">
 
-          <!-- LEFT COLUMN: Horizon Media -->
-          <div class="col s12 m6 l6">
-            <div class="card">
-              <div class="card-content">
-                <div class="card-header">
-                  <div class="company-logo">
-                    <a href="https://www.horizonmedia.com/" target="_blank">
-                      <img alt="Horizon Media logo" src="/assets/img/horizon-media-logo.png" />
-                    </a>
-                  </div>
-                  <div class="company-info">
-                    <div class="company-name">
-                      <a href="https://www.horizonmedia.com/" target="_blank" class="teal-text hoverline">Horizon Media</a>
-                    </div>
-                    <div class="location-date-row">
-                      <div class="company-location">New York, NY</div>
-                      <div class="experience-date">Apr 2023 – Present</div>
-                    </div>
+      <h1 class="hero-title">
+        <span class="hero-name">Yucel Yavuz</span>
+      </h1>
+
+      <p class="hero-description">
+        Innovative <strong>AI Data Scientist</strong> with <strong>5+ years</strong> of expertise in <strong>Machine Learning</strong>,
+        <strong>Generative AI</strong>, and <strong>Python-based modeling</strong>. Passionate about building interpretable
+        AI systems that drive measurable business impact.
+      </p>
+
+      <div class="hero-cta">
+        <a href="#projects" class="btn btn-primary">
+          <span>View My Work</span>
+          <i class="fas fa-arrow-right"></i>
+        </a>
+        <a href="#contact" class="btn btn-secondary">
+          <span>Get In Touch</span>
+          <i class="fas fa-envelope"></i>
+        </a>
+      </div>
+
+      <div class="hero-social">
+        <a href="https://github.com/yucel-yavuz" target="_blank" aria-label="GitHub">
+          <i class="fab fa-github"></i>
+        </a>
+        <a href="https://linkedin.com/in/yucyavuz" target="_blank" aria-label="LinkedIn">
+          <i class="fab fa-linkedin"></i>
+        </a>
+        <a href="mailto:yyavuz.ds@gmail.com" aria-label="Email">
+          <i class="fas fa-envelope"></i>
+        </a>
+      </div>
+    </div>
+
+    <a href="#about" class="scroll-indicator">
+      <i class="fas fa-chevron-down"></i>
+    </a>
+  </section>
+
+  <!-- About Section -->
+  <section id="about" class="section">
+    <div class="container">
+      <h2 class="section-title" data-aos="fade-up">About Me</h2>
+
+      <div class="about-content">
+        <div class="about-text" data-aos="fade-right">
+          <p>
+            Innovative and results-oriented <strong>AI Data Scientist</strong> with <strong>5+ years</strong> of expertise in <strong>machine learning, data analytics, and Python-based modeling</strong>, complemented by <strong>10+ years</strong> of cross-functional leadership experience.
+          </p>
+          <p>
+            Skilled in developing and deploying advanced AI solutions, including <strong>LLM-powered agents</strong> for media planning, <strong>SQL automation</strong>, <strong>document summarization</strong>, and <strong>sentiment analysis</strong>.
+          </p>
+          <p>
+            Proficient in leveraging <strong>Python</strong> (Scikit-Learn, XGBoost, SHAP), big data platforms (<strong>Databricks</strong>, <strong>Snowflake</strong>, SQL), and BI tools (<strong>Tableau</strong>, <strong>Power BI</strong>) to translate complex data into actionable business insights.
+          </p>
+        </div>
+
+        <div class="about-stats" data-aos="fade-left">
+          <div class="stat-card">
+            <div class="stat-number" data-target="5">0</div>
+            <div class="stat-label">Years of AI/ML Experience</div>
+          </div>
+          <div class="stat-card">
+            <div class="stat-number" data-target="92">0</div>
+            <div class="stat-label">% Predictive Accuracy</div>
+          </div>
+          <div class="stat-card">
+            <div class="stat-number" data-target="40">0</div>
+            <div class="stat-label">% Reduced Manual Reporting</div>
+          </div>
+          <div class="stat-card">
+            <div class="stat-number" data-target="35">0</div>
+            <div class="stat-label">% Faster Decisions</div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Experience Section -->
+  <section id="experience" class="section section-alt">
+    <div class="container">
+      <h2 class="section-title" data-aos="fade-up">Experience</h2>
+
+      <div class="timeline">
+        <!-- Horizon Media -->
+        <div class="timeline-item" data-aos="fade-up">
+          <div class="timeline-marker"></div>
+          <div class="timeline-content">
+            <div class="experience-card">
+              <div class="experience-header">
+                <div class="company-info">
+                  <img src="../assets/img/horizon-media-logo.png" alt="Horizon Media" class="company-logo">
+                  <div>
+                    <h3 class="company-name">Horizon Media</h3>
+                    <p class="company-location">New York, NY</p>
                   </div>
                 </div>
-                <div class="role">AI Data Scientist | Generative AI</div>
-                <ul>
-                  <li>Leveraged <b>LLMs</b> (LangChain, Streamlit, Snowflake Cortex) to interpret demographic & behavioral data—<b>accelerating decisions by 35%</b> and <b>reducing manual reporting by 40%</b>.</li>
-                  <li>Developed <b>SHAP-driven interpretable AI frameworks</b> to enhance model transparency and stakeholder confidence.</li>
-                  <li>Engineered <b>Databricks + Snowflake</b> pipelines using XGBoost, Random Forest, Gradient Boosting—achieved <b>92% predictive accuracy</b> for look-alike & LTV models, improving campaign efficiency by <b>15%</b>.</li>
-                  <li>Performed segmentation via <b>RFM, K-Means, hierarchical clustering</b>, identifying high-value audiences and <b>boosting retention by 12%</b>.</li>
-                  <li>Designed <b>Tableau & Power BI</b> dashboards for 1P metrics and behavioral clusters—cutting insight turnaround by <b>30%</b>.</li>
-                  <li>Delivered <b>ML + GenAI audience profiling</b> that strengthened pitches and helped secure <b>two major client wins</b>.</li>
-                  <li><b>Applied causal inference</b> (A/B Testing, PSM) to measure true campaign lift and ROI, improving targeting performance by <b>~12%</b>.</li>
-                </ul>
+                <span class="experience-date">Apr 2023 – Present</span>
+              </div>
+
+              <h4 class="role-title">AI Data Scientist | Generative AI</h4>
+
+              <ul class="experience-highlights">
+                <li>Leveraged <strong>LLMs</strong> (LangChain, Streamlit, Snowflake Cortex) to interpret demographic & behavioral data—<strong>accelerating decisions by 35%</strong> and <strong>reducing manual reporting by 40%</strong></li>
+                <li>Developed <strong>SHAP-driven interpretable AI frameworks</strong> to enhance model transparency and stakeholder confidence</li>
+                <li>Engineered <strong>Databricks + Snowflake</strong> pipelines using XGBoost, Random Forest, Gradient Boosting—achieved <strong>92% predictive accuracy</strong> for look-alike & LTV models, improving campaign efficiency by <strong>15%</strong></li>
+                <li>Performed segmentation via <strong>RFM, K-Means, hierarchical clustering</strong>, identifying high-value audiences and <strong>boosting retention by 12%</strong></li>
+                <li>Designed <strong>Tableau & Power BI</strong> dashboards for 1P metrics and behavioral clusters—cutting insight turnaround by <strong>30%</strong></li>
+                <li>Delivered <strong>ML + GenAI audience profiling</strong> that strengthened pitches and helped secure <strong>two major client wins</strong></li>
+                <li><strong>Applied causal inference</strong> (A/B Testing, PSM) to measure true campaign lift and ROI, improving targeting performance by <strong>~12%</strong></li>
+              </ul>
+
+              <div class="tech-tags">
+                <span class="tech-tag">Python</span>
+                <span class="tech-tag">LangChain</span>
+                <span class="tech-tag">Snowflake</span>
+                <span class="tech-tag">Databricks</span>
+                <span class="tech-tag">SHAP</span>
+                <span class="tech-tag">XGBoost</span>
               </div>
             </div>
           </div>
+        </div>
 
-          <!-- RIGHT COLUMN: Bowery Farming & Teleplan -->
-          <div class="col s12 m6 l6">
-            <!-- Bowery Farming -->
-            <div class="card" style="margin-bottom: 20px;">
-              <div class="card-content">
-                <div class="card-header">
-                  <div class="company-logo">
-                    <a href="https://boweryfarming.com" target="_blank">
-                      <img alt="Bowery logo" src="/assets/img/bowery-farming-logo.png" />
-                    </a>
-                  </div>
-                  <div class="company-info">
-                    <div class="company-name">
-                      <span class="teal-text">Bowery Farming</span>
-                    </div>
-                    <div class="location-date-row">
-                      <div class="company-location">Kearny, NJ</div>
-                      <div class="experience-date">Sep 2018 – Apr 2023</div>
-                    </div>
-                  </div>
-                </div>
-                <div class="role">Data Scientist | Operations Manager</div>
-                <ul>
-                  <li>Built a <b>data analytics dashboard</b> that increased productivity by <b>25%</b> across operations.</li>
-                  <li>Designed <b>layout & logistics optimization</b> improving storage efficiency by <b>20%</b> and customer satisfaction by <b>15%</b>.</li>
-                  <li>Introduced <b>harvesting & packing best practices</b>, reducing loss by <b>20%</b>.</li>
-                  <li>Achieved <b>98–99% SQF</b> audit results three consecutive years.</li>
-                  <li>Mentored teams (only <b>2% attrition</b>) and promoted six employees to leadership roles.</li>
-                  <li>Created a <b>yield prediction ML model</b> (7 ML + 1 DL baseline), boosting yield accuracy by <b>10%</b>.</li>
-                </ul>
-              </div>
-            </div>
-
-            <!-- Teleplan -->
-            <div class="card">
-              <div class="card-content">
-                <div class="card-header">
-                  <div class="company-logo teleplan-logo">
-                    <img alt="Teleplan logo" src="/assets/img/teleplan-logo.png" />
-                  </div>
-                  <div class="company-info">
-                    <div class="company-name">
-                      <span class="teal-text">Teleplan</span>
-                    </div>
-                    <div class="location-date-row">
-                      <div class="company-location">Mechanicsburg, PA</div>
-                      <div class="experience-date">Jan 2017 – Sep 2018</div>
-                    </div>
+        <!-- Bowery Farming -->
+        <div class="timeline-item" data-aos="fade-up">
+          <div class="timeline-marker"></div>
+          <div class="timeline-content">
+            <div class="experience-card">
+              <div class="experience-header">
+                <div class="company-info">
+                  <img src="../assets/img/bowery-farming-logo.png" alt="Bowery Farming" class="company-logo">
+                  <div>
+                    <h3 class="company-name">Bowery Farming</h3>
+                    <p class="company-location">Kearny, NJ</p>
                   </div>
                 </div>
-                <div class="role">Sr. Analyst | Supply Chain</div>
-                <ul>
-                  <li>Developed a <b>supply chain dashboard</b> delivering <b>$150K</b> profit within 8 months.</li>
-                  <li>Managed 40+ supplier scorecards, raising procurement efficiency to <b>92.7%</b>.</li>
-                  <li>Introduced process optimization models achieving <b>99.9% cycle count accuracy</b>.</li>
-                  <li>Partnered cross-functionally to qualify vendors and streamline logistics; launched sustainability initiatives to reduce waste.</li>
-                </ul>
+                <span class="experience-date">Sep 2018 – Apr 2023</span>
+              </div>
+
+              <h4 class="role-title">Data Scientist | Operations Manager</h4>
+
+              <ul class="experience-highlights">
+                <li>Built a <strong>data analytics dashboard</strong> that increased productivity by <strong>25%</strong> across operations</li>
+                <li>Designed <strong>layout & logistics optimization</strong> improving storage efficiency by <strong>20%</strong> and customer satisfaction by <strong>15%</strong></li>
+                <li>Introduced <strong>harvesting & packing best practices</strong>, reducing loss by <strong>20%</strong></li>
+                <li>Achieved <strong>98–99% SQF</strong> audit results three consecutive years</li>
+                <li>Mentored teams (only <strong>2% attrition</strong>) and promoted six employees to leadership roles</li>
+                <li>Created a <strong>yield prediction ML model</strong> (7 ML + 1 DL baseline), boosting yield accuracy by <strong>10%</strong></li>
+              </ul>
+
+              <div class="tech-tags">
+                <span class="tech-tag">Python</span>
+                <span class="tech-tag">Machine Learning</span>
+                <span class="tech-tag">Data Analytics</span>
+                <span class="tech-tag">Dashboard Design</span>
               </div>
             </div>
           </div>
+        </div>
 
+        <!-- Teleplan -->
+        <div class="timeline-item" data-aos="fade-up">
+          <div class="timeline-marker"></div>
+          <div class="timeline-content">
+            <div class="experience-card">
+              <div class="experience-header">
+                <div class="company-info">
+                  <img src="../assets/img/teleplan-logo.png" alt="Teleplan" class="company-logo">
+                  <div>
+                    <h3 class="company-name">Teleplan</h3>
+                    <p class="company-location">Mechanicsburg, PA</p>
+                  </div>
+                </div>
+                <span class="experience-date">Jan 2017 – Sep 2018</span>
+              </div>
+
+              <h4 class="role-title">Sr. Analyst | Supply Chain</h4>
+
+              <ul class="experience-highlights">
+                <li>Developed a <strong>supply chain dashboard</strong> delivering <strong>$150K</strong> profit within 8 months</li>
+                <li>Managed 40+ supplier scorecards, raising procurement efficiency to <strong>92.7%</strong></li>
+                <li>Introduced process optimization models achieving <strong>99.9% cycle count accuracy</strong></li>
+                <li>Partnered cross-functionally to qualify vendors and streamline logistics; launched sustainability initiatives to reduce waste</li>
+              </ul>
+
+              <div class="tech-tags">
+                <span class="tech-tag">Data Analysis</span>
+                <span class="tech-tag">Process Optimization</span>
+                <span class="tech-tag">Supply Chain</span>
+              </div>
+            </div>
+          </div>
         </div>
       </div>
-    </section>
+    </div>
+  </section>
 
-    <!-- SECTION 4: Projects (kept, lightly cleaned) -->
-    <section id="projects" class="section scrollspy">
-      <h3 class="page-title white-text teal">Projects</h3>
-      <div class="container">
-        <div class="row">
+  <!-- Projects Section -->
+  <section id="projects" class="section">
+    <div class="container">
+      <h2 class="section-title" data-aos="fade-up">Featured Projects</h2>
 
-          <!-- Media Planning Agent -->
-          <div class="col s12 m12 l6">
-            <div class="card">
-              <div class="card-image waves-effect waves-block waves-light">
-                <video width="100%" height="100%" controls>
-                  <source src="/assets/videos/Marketing_Analytics_Media_Planning_Team.mp4" type="video/mp4">
-                  Your browser does not support the video tag.
-                </video>
-              </div>
-              <div class="card-content">
-                <span class="card-title activator teal-text hoverline">
-                  AI Media Planning Agent<br>Multi-Agent LLM System for Marketing Strategy
-                </span>
-                <i class="mdi-navigation-more-vert activator"></i>
-              </div>
-              <div class="card-reveal">
-                <span class="card-title grey-text"><small>Project Details</small><i class="mdi-navigation-close right"></i></span>
-                <h5 style="margin-top: 10px; margin-bottom: 20px; text-align: center; font-weight: bold; font-size: 1.3rem; color: #0d394e;">AI Media Planning Agent<br>Multi-Agent LLM System for Marketing Strategy</h5>
-                <p style="margin-top: 0; color: #009688;"><strong>Tools:</strong> Python, LangGraph, LangChain, OpenAI, Streamlit</p>
-                <p style="margin-top: 12px; text-align: justify;">
-                  Developed a LangGraph-based multi-agent AI system (<strong style="font-weight: 900;">Supervisor, Business Intelligence Expert, Product Expert, Media Planning Expert, Creative Strategy Expert, Email Writer</strong>) to automate end-to-end marketing workflows—turning natural language prompts into data insights, targeted media plans, creative strategy, and personalized email campaigns.
-                </p>
-              </div>
-            </div>
+      <div class="projects-grid">
+        <!-- AI Media Planning Agent -->
+        <div class="project-card" data-aos="fade-up">
+          <div class="project-video">
+            <video preload="metadata" controls>
+              <source src="../assets/videos/Marketing_Analytics_Media_Planning_Team.mp4" type="video/mp4">
+            </video>
           </div>
 
-          <!-- Marketing Assistant CoPilot -->
-          <div class="col s12 m12 l6">
-            <div class="card">
-              <div class="card-image waves-effect waves-block waves-light">
-                <video width="100%" height="100%" controls>
-                  <source src="/assets/videos/Marketing_Assistant_CoPilot.mp4" type="video/mp4">
-                  Your browser does not support the video tag.
-                </video>
-              </div>
-              <div class="card-content">
-                <span class="card-title activator teal-text hoverline">
-                  Marketing Assistant CoPilot<br>PDF Insights & Summarization Tool
-                </span>
-                <i class="mdi-navigation-more-vert activator"></i>
-              </div>
-              <div class="card-reveal">
-                <span class="card-title grey-text"><small>Project Details</small><i class="mdi-navigation-close right"></i></span>
-                <h5 style="margin-top: 10px; margin-bottom: 20px; text-align: center; font-weight: bold; font-size: 1.3rem; color: #0d394e;">Marketing Assistant CoPilot<br>PDF Insights & Summarization Tool</h5>
-                <p style="margin-top: 0; color: #009688;"><strong>Tools:</strong> Python, Streamlit, LangChain, OpenAI, FAISS</p>
-                <p style="margin-top: 12px; text-align: justify;">
-                  Built a chat-enabled app that allows users to upload PDFs and either summarize documents using customizable templates or query them via natural language. Combined LangChain's RAG architecture with history-aware retrieval, OpenAI LLMs, and FAISS vector search to deliver contextual insights and executive-ready summaries.
-                </p>
-              </div>
+          <div class="project-content">
+            <h3 class="project-title">AI Media Planning Agent</h3>
+            <p class="project-subtitle">Multi-Agent LLM System for Marketing Strategy</p>
+
+            <p class="project-description">
+              Developed a LangGraph-based multi-agent AI system (Supervisor, Business Intelligence Expert, Product Expert, Media Planning Expert, Creative Strategy Expert, Email Writer) to automate end-to-end marketing workflows—turning natural language prompts into data insights, targeted media plans, creative strategy, and personalized email campaigns.
+            </p>
+
+            <div class="project-tech">
+              <span class="tech-badge">Python</span>
+              <span class="tech-badge">LangGraph</span>
+              <span class="tech-badge">LangChain</span>
+              <span class="tech-badge">OpenAI</span>
+              <span class="tech-badge">Streamlit</span>
             </div>
           </div>
+        </div>
 
-          <!-- Business Intelligence Agent -->
-          <div class="col s12 m12 l6">
-            <div class="card">
-              <div class="card-image waves-effect waves-block waves-light">
-                <video width="100%" height="100%" controls>
-                  <source src="/assets/videos/Data_Insight_Copilot.mp4" type="video/mp4">
-                  Your browser does not support the video tag.
-                </video>
-              </div>
-              <div class="card-content">
-                <span class="card-title activator teal-text hoverline">
-                  Business Intelligence Agent<br>Natural Language to SQL & Chart Generator
-                </span>
-                <i class="mdi-navigation-more-vert activator"></i>
-              </div>
-              <div class="card-reveal">
-                <span class="card-title grey-text"><small>Project Details</small><i class="mdi-navigation-close right"></i></span>
-                <h5 style="margin-top: 10px; margin-bottom: 20px; text-align: center; font-weight: bold; font-size: 1.3rem; color: #0d394e;">Business Intelligence Agent<br>Natural Language to SQL & Chart Generator</h5>
-                <p style="margin-top: 0; color: #009688;"><strong>Tools:</strong> Python, LangGraph, LangChain, OpenAI, Plotly, SQLite</p>
-                <p style="margin-top: 12px; text-align: justify;">
-                  Engineered an AI agent translating natural-language questions into SQL queries, producing visual analytics and executive summaries with auto-generated insights.
-                </p>
-              </div>
-            </div>
+        <!-- Marketing Assistant CoPilot -->
+        <div class="project-card" data-aos="fade-up" data-aos-delay="100">
+          <div class="project-video">
+            <video preload="metadata" controls>
+              <source src="../assets/videos/Marketing_Assistant_CoPilot.mp4" type="video/mp4">
+            </video>
           </div>
 
-          <!-- Product Sentiment Analysis -->
-          <div class="col s12 m12 l6">
-            <div class="card">
-              <div class="card-image waves-effect waves-block waves-light">
-                <video width="100%" height="100%" controls>
-                  <source src="/assets/videos/Product_Sentiment_Analysis.mp4" type="video/mp4">
-                  Your browser does not support the video tag.
-                </video>
-              </div>
-              <div class="card-content">
-                <span class="card-title activator teal-text hoverline">
-                  Product Sentiment Analysis<br>YouTube-Based Consumer Insight Generator
-                </span>
-                <i class="mdi-navigation-more-vert activator"></i>
-              </div>
-              <div class="card-reveal">
-                <span class="card-title grey-text"><small>Project Details</small><i class="mdi-navigation-close right"></i></span>
-                <h5 style="margin-top: 10px; margin-bottom: 20px; text-align: center; font-weight: bold; font-size: 1.3rem; color: #0d394e;">Product Sentiment Analysis<br>YouTube-Based Consumer Insight Generator</h5>
-                <p style="margin-top: 0; color: #009688;"><strong>Tools:</strong> Python, LangChain, OpenAI, Streamlit, YouTube API</p>
-                <p style="margin-top: 12px; text-align: justify;">
-                  Built an LLM-powered sentiment analysis tool aggregating and classifying YouTube comments to deliver real-time product perception dashboards.
-                </p>
-              </div>
+          <div class="project-content">
+            <h3 class="project-title">Marketing Assistant CoPilot</h3>
+            <p class="project-subtitle">PDF Insights & Summarization Tool</p>
+
+            <p class="project-description">
+              Built a chat-enabled app that allows users to upload PDFs and either summarize documents using customizable templates or query them via natural language. Combined LangChain's RAG architecture with history-aware retrieval, OpenAI LLMs, and FAISS vector search to deliver contextual insights and executive-ready summaries.
+            </p>
+
+            <div class="project-tech">
+              <span class="tech-badge">Python</span>
+              <span class="tech-badge">Streamlit</span>
+              <span class="tech-badge">LangChain</span>
+              <span class="tech-badge">OpenAI</span>
+              <span class="tech-badge">FAISS</span>
             </div>
           </div>
+        </div>
 
+        <!-- Business Intelligence Agent -->
+        <div class="project-card" data-aos="fade-up" data-aos-delay="200">
+          <div class="project-video">
+            <video preload="metadata" controls>
+              <source src="../assets/videos/Data_Insight_Copilot.mp4" type="video/mp4">
+            </video>
+          </div>
+
+          <div class="project-content">
+            <h3 class="project-title">Business Intelligence Agent</h3>
+            <p class="project-subtitle">Natural Language to SQL & Chart Generator</p>
+
+            <p class="project-description">
+              Engineered an AI agent translating natural-language questions into SQL queries, producing visual analytics and executive summaries with auto-generated insights.
+            </p>
+
+            <div class="project-tech">
+              <span class="tech-badge">Python</span>
+              <span class="tech-badge">LangGraph</span>
+              <span class="tech-badge">LangChain</span>
+              <span class="tech-badge">OpenAI</span>
+              <span class="tech-badge">Plotly</span>
+              <span class="tech-badge">SQLite</span>
+            </div>
+          </div>
+        </div>
+
+        <!-- Product Sentiment Analysis -->
+        <div class="project-card" data-aos="fade-up" data-aos-delay="300">
+          <div class="project-video">
+            <video preload="metadata" controls>
+              <source src="../assets/videos/Product_Sentiment_Analysis.mp4" type="video/mp4">
+            </video>
+          </div>
+
+          <div class="project-content">
+            <h3 class="project-title">Product Sentiment Analysis</h3>
+            <p class="project-subtitle">YouTube-Based Consumer Insight Generator</p>
+
+            <p class="project-description">
+              Built an LLM-powered sentiment analysis tool aggregating and classifying YouTube comments to deliver real-time product perception dashboards.
+            </p>
+
+            <div class="project-tech">
+              <span class="tech-badge">Python</span>
+              <span class="tech-badge">LangChain</span>
+              <span class="tech-badge">OpenAI</span>
+              <span class="tech-badge">Streamlit</span>
+              <span class="tech-badge">YouTube API</span>
+            </div>
+          </div>
         </div>
       </div>
-    </section>
+    </div>
+  </section>
 
-    <!-- SECTION 5: Skills -->
-    <section id="skills" class="section scrollspy">
-      <h3 class="page-title white-text teal">Skills</h3>
-      <div class="container">
-        <div class="row">
+  <!-- Skills Section -->
+  <section id="skills" class="section section-alt">
+    <div class="container">
+      <h2 class="section-title" data-aos="fade-up">Skills & Expertise</h2>
 
-          <!-- Left Column -->
-          <div class="col s12 m6 l6">
-            <!-- AI, Machine Learning & Advanced Analytics -->
-            <div class="card">
-              <div class="card-content">
-                <h4 class="brown-text light" style="font-size: 1.3rem; font-weight: 600; padding-bottom: 8px; border-bottom: 1px solid #ddd; margin-bottom: 8px;">AI, Machine Learning & Advanced Analytics</h4>
-                <p style="line-height: 1.6; margin-top: 0;">
-                  Generative AI • Agentic AI • LangChain • LangGraph • Retrieval-Augmented Generation (RAG) • Snowflake Cortex (Text-to-SQL, BI Automation) • Sentiment Analysis • SHAP Explainability • A/B Testing • Supervised & Unsupervised Learning • Logistic Regression • Random Forests • Gradient Boosting • XGBoost • Time Series Forecasting • Principal Component Analysis (PCA) • Cluster Analysis
-                </p>
-                <p class="grey-text" style="margin-top: 12px; font-style: italic; font-size: 0.9rem;">
-                  Highlight: Interpretable & generative AI systems for automated analytics and decision-making.
-                </p>
-              </div>
-            </div>
-
-            <!-- Data Visualization & Business Intelligence -->
-            <div class="card">
-              <div class="card-content">
-                <h4 class="brown-text light" style="font-size: 1.3rem; font-weight: 600; padding-bottom: 8px; border-bottom: 1px solid #ddd; margin-bottom: 8px;">Data Visualization & Business Intelligence</h4>
-                <p style="line-height: 1.6; margin-top: 0;">
-                  Tableau • Power BI • Plotly • Matplotlib • Seaborn • Automated Dashboarding & Insight Generation
-                </p>
-                <p class="grey-text" style="margin-top: 12px; font-style: italic; font-size: 0.9rem;">
-                  Highlight: Turns complex datasets into clear narratives and automated BI insights.
-                </p>
-              </div>
-            </div>
+      <div class="skills-grid">
+        <!-- AI & Machine Learning -->
+        <div class="skill-category" data-aos="fade-up">
+          <div class="skill-icon">
+            <i class="fas fa-brain"></i>
           </div>
-
-          <!-- Right Column -->
-          <div class="col s12 m6 l6">
-            <!-- Programming Tools & Platforms -->
-            <div class="card">
-              <div class="card-content">
-                <h4 class="brown-text light" style="font-size: 1.3rem; font-weight: 600; padding-bottom: 8px; border-bottom: 1px solid #ddd; margin-bottom: 8px;">Programming Tools & Platforms</h4>
-                <p style="line-height: 1.6; margin-top: 0;">
-                  Python • PySpark • SQL (Snowflake) • Streamlit • Scikit-Learn • TensorFlow • Keras • PyTorch • H2O.ai • LightGBM • Pandas • NumPy • Databricks (Model Training & Deployment) • Google Colab • Docker • Git/GitHub
-                </p>
-                <p class="grey-text" style="margin-top: 12px; font-style: italic; font-size: 0.9rem;">
-                  Highlight: End-to-end ML on Databricks & Snowflake with robust deployment pipelines.
-                </p>
-              </div>
-            </div>
-
-            <!-- Leadership & Collaboration -->
-            <div class="card">
-              <div class="card-content">
-                <h4 class="brown-text light" style="font-size: 1.3rem; font-weight: 600; padding-bottom: 8px; border-bottom: 1px solid #ddd; margin-bottom: 8px;">Leadership & Collaboration</h4>
-                <p style="line-height: 1.6; margin-top: 0;">
-                  Team Coaching & Mentorship • Cross-Functional Collaboration • Stakeholder Engagement • Strategic Initiative Leadership & Decision-Making
-                </p>
-                <p class="grey-text" style="margin-top: 12px; font-style: italic; font-size: 0.9rem;">
-                  Highlight: Bridges technical depth with business impact through collaborative leadership.
-                </p>
-              </div>
-            </div>
+          <h3 class="skill-category-title">AI, Machine Learning & Advanced Analytics</h3>
+          <p class="skill-description">
+            Generative AI • Agentic AI • LangChain • LangGraph • RAG • Snowflake Cortex • Sentiment Analysis • SHAP Explainability • A/B Testing • Supervised & Unsupervised Learning • Random Forests • Gradient Boosting • XGBoost • Time Series Forecasting • PCA • Cluster Analysis
+          </p>
+          <div class="skill-highlight">
+            Interpretable & generative AI systems for automated analytics and decision-making
           </div>
+        </div>
 
+        <!-- Programming & Platforms -->
+        <div class="skill-category" data-aos="fade-up" data-aos-delay="100">
+          <div class="skill-icon">
+            <i class="fas fa-code"></i>
+          </div>
+          <h3 class="skill-category-title">Programming Tools & Platforms</h3>
+          <p class="skill-description">
+            Python • PySpark • SQL (Snowflake) • Streamlit • Scikit-Learn • TensorFlow • Keras • PyTorch • H2O.ai • LightGBM • Pandas • NumPy • Databricks • Google Colab • Docker • Git/GitHub
+          </p>
+          <div class="skill-highlight">
+            End-to-end ML on Databricks & Snowflake with robust deployment pipelines
+          </div>
+        </div>
+
+        <!-- Data Visualization & BI -->
+        <div class="skill-category" data-aos="fade-up" data-aos-delay="200">
+          <div class="skill-icon">
+            <i class="fas fa-chart-line"></i>
+          </div>
+          <h3 class="skill-category-title">Data Visualization & Business Intelligence</h3>
+          <p class="skill-description">
+            Tableau • Power BI • Plotly • Matplotlib • Seaborn • Automated Dashboarding & Insight Generation
+          </p>
+          <div class="skill-highlight">
+            Transforms complex datasets into clear narratives and automated BI insights
+          </div>
+        </div>
+
+        <!-- Leadership & Collaboration -->
+        <div class="skill-category" data-aos="fade-up" data-aos-delay="300">
+          <div class="skill-icon">
+            <i class="fas fa-users"></i>
+          </div>
+          <h3 class="skill-category-title">Leadership & Collaboration</h3>
+          <p class="skill-description">
+            Team Coaching & Mentorship • Cross-Functional Collaboration • Stakeholder Engagement • Strategic Initiative Leadership & Decision-Making
+          </p>
+          <div class="skill-highlight">
+            Bridges technical depth with business impact through collaborative leadership
+          </div>
         </div>
       </div>
-    </section>
+    </div>
+  </section>
 
-    <!-- SECTION 6: Education & Certifications -->
-    <section id="education" class="section scrollspy">
-      <h3 class="page-title white-text teal">Education & Certifications</h3>
-      <div class="container">
-        <div class="row">
+  <!-- Education Section -->
+  <section id="education" class="section">
+    <div class="container">
+      <h2 class="section-title" data-aos="fade-up">Education & Certifications</h2>
 
-          <!-- Education -->
-          <div class="col s12 m6 l6">
-            <div class="card">
-              <div class="card-content">
-                <h4 class="brown-text light" style="font-weight: bold;">Education</h4>
+      <div class="education-grid">
+        <!-- Education -->
+        <div class="education-col" data-aos="fade-right">
+          <h3 class="subsection-title">
+            <i class="fas fa-graduation-cap"></i>
+            Education
+          </h3>
 
-                <ul class="browser-default" style="margin-left:18px">
-                  <li><b class="teal-text">U.S. Army War College — Carlisle, PA</b><br/>
-                    <em>International Fellows Academic Prep Course</em></li>
+          <div class="education-list">
+            <div class="education-item">
+              <h4>U.S. Army War College</h4>
+              <p class="edu-degree">International Fellows Academic Prep Course</p>
+              <p class="edu-location">Carlisle, PA</p>
+            </div>
 
-                  <li><b class="teal-text">National Defense University — Ankara, Turkey</b><br/>
-                    <em>PhD Education in Technology Management (Pending)</em></li>
+            <div class="education-item">
+              <h4>National Defense University</h4>
+              <p class="edu-degree">PhD Education in Technology Management (Pending)</p>
+              <p class="edu-location">Ankara, Turkey</p>
+            </div>
 
-                  <li><b class="teal-text">Turkish Army War College — Istanbul, Turkey</b><br/>
-                    <em>Master of Arts in Organizational Management & Leadership</em></li>
+            <div class="education-item">
+              <h4>Turkish Army War College</h4>
+              <p class="edu-degree">Master of Arts in Organizational Management & Leadership</p>
+              <p class="edu-location">Istanbul, Turkey</p>
+            </div>
 
-                  <li><b class="teal-text">National Defense University — Ankara, Turkey</b><br/>
-                    <em>Master of Science in Technology Management</em></li>
+            <div class="education-item">
+              <h4>National Defense University</h4>
+              <p class="edu-degree">Master of Science in Technology Management</p>
+              <p class="edu-location">Ankara, Turkey</p>
+            </div>
 
-                  <li><b class="teal-text">National Defense University — Ankara, Turkey</b><br/>
-                    <em>Bachelor of Science in Systems Engineering</em></li>
-                </ul>
-              </div>
+            <div class="education-item">
+              <h4>National Defense University</h4>
+              <p class="edu-degree">Bachelor of Science in Systems Engineering</p>
+              <p class="edu-location">Ankara, Turkey</p>
             </div>
           </div>
+        </div>
 
-          <!-- Certifications -->
-          <div class="col s12 m6 l6">
-            <div class="card">
-              <div class="card-content">
-                <h4 class="brown-text light" style="font-weight: bold;">Certifications</h4>
+        <!-- Certifications -->
+        <div class="education-col" data-aos="fade-left">
+          <h3 class="subsection-title">
+            <i class="fas fa-certificate"></i>
+            Certifications
+          </h3>
 
-                <p><b class="teal-text">Generative AI & Machine Learning</b></p>
-                <ul class="browser-default" style="margin-left:18px">
-                  <li>Generative AI for Data Scientists — <em>IBM</em></li>
-                  <li>Deep Learning Essentials with Keras — <em>IBM</em></li>
-                  <li>Machine Learning with Python (V2) — <em>IBM</em></li>
-                  <li>Generative AI Bootcamp — <em>Business Science</em></li>
-                  <li>Master Machine Learning for Data Science & AI — <em>CodeBasics</em></li>
-                  <li>Databricks Mosaic AI — <em>Coursera</em></li>
-                </ul>
-
-                <p style="margin-top:14px"><b class="teal-text">Leadership & Management</b></p>
-                <ul class="browser-default" style="margin-left:18px">
-                  <li>Certified Management Executive (CME) — <em>Management & Strategy Institute</em></li>
-                </ul>
-
-              </div>
-            </div>
+          <div class="certification-category">
+            <h4 class="cert-category-title">Generative AI & Machine Learning</h4>
+            <ul class="certification-list">
+              <li><span class="cert-name">Generative AI for Data Scientists</span> — <em>IBM</em></li>
+              <li><span class="cert-name">Deep Learning Essentials with Keras</span> — <em>IBM</em></li>
+              <li><span class="cert-name">Machine Learning with Python (V2)</span> — <em>IBM</em></li>
+              <li><span class="cert-name">Generative AI Bootcamp</span> — <em>Business Science</em></li>
+              <li><span class="cert-name">Master Machine Learning for Data Science & AI</span> — <em>CodeBasics</em></li>
+              <li><span class="cert-name">Databricks Mosaic AI</span> — <em>Coursera</em></li>
+            </ul>
           </div>
 
+          <div class="certification-category">
+            <h4 class="cert-category-title">Leadership & Management</h4>
+            <ul class="certification-list">
+              <li><span class="cert-name">Certified Management Executive (CME)</span> — <em>Management & Strategy Institute</em></li>
+            </ul>
+          </div>
         </div>
       </div>
-    </section>
+    </div>
+  </section>
 
-    <!-- SECTION 7: Contact -->
-    <section id="contact" class="section scrollspy full-height">
-      <h3 class="page-title white-text teal">Contact</h3>
-      <div class="container">
-        <p>
-          <a data-position="top" data-tooltip="Call Yucel"
-             class="btn-floating btn-large waves-effect waves-light blue-grey tooltipped"><i class="fa fa-phone"></i></a>
-          <a>732-595-1777</a>
-        </p>
-        <p>
-          <a aria-label="Email Yucel" href="mailto:yyavuz.ds@gmail.com" target="_blank" data-position="top"
-             data-tooltip="Email Yucel" class="btn-floating btn-large waves-effect waves-light blue-grey tooltipped"><i class="fa fa-envelope"></i></a>
-          <a aria-label="Email Yucel" href="mailto:yyavuz.ds@gmail.com" class="hoverline">yyavuz.ds@gmail.com</a>
-        </p>
-        <p>
-          <a aria-label="View Yucel on GitHub" href="https://github.com/yucel-yavuz" target="_blank"
-             data-position="top" data-tooltip="View Yucel on GitHub"
-             class="btn-floating btn-large waves-effect waves-light blue-grey tooltipped"><i class="fa fa-github"></i></a>
-          <a aria-label="Yucel on Github" href="https://github.com/yucel-yavuz" class="hoverline" target="_blank">github.com/yucel-yavuz</a>
-        </p>
-        <p>
-          <a aria-label="View Yucel on LinkedIn" href="https://linkedin.com/in/yucyavuz" target="_blank"
-             data-position="top" data-tooltip="View Yucel on LinkedIn"
-             class="btn-floating btn-large waves-effect waves-light blue-grey tooltipped"><i class="fa fa-linkedin"></i></a>
-          <a aria-label="Yucel on LinkedIn" href="https://linkedin.com/in/yucyavuz" class="hoverline" target="_blank">linkedin.com/in/yucyavuz</a>
-        </p>
+  <!-- Contact Section -->
+  <section id="contact" class="section section-alt">
+    <div class="container">
+      <h2 class="section-title" data-aos="fade-up">Get In Touch</h2>
+
+      <div class="contact-content">
+        <div class="contact-text" data-aos="fade-up">
+          <p>
+            I'm always interested in hearing about new opportunities, collaborations,
+            or just connecting with fellow data science enthusiasts. Feel free to reach out!
+          </p>
+        </div>
+
+        <div class="contact-methods" data-aos="fade-up">
+          <!-- Top Row: Email and Phone -->
+          <div class="contact-row">
+            <a href="mailto:yyavuz.ds@gmail.com" class="contact-item">
+              <div class="contact-icon">
+                <i class="fas fa-envelope"></i>
+              </div>
+              <div class="contact-info">
+                <h4>Email</h4>
+                <p>yyavuz.ds@gmail.com</p>
+              </div>
+            </a>
+
+            <a href="tel:7325951777" class="contact-item">
+              <div class="contact-icon">
+                <i class="fas fa-phone"></i>
+              </div>
+              <div class="contact-info">
+                <h4>Phone</h4>
+                <p>732-595-1777</p>
+              </div>
+            </a>
+          </div>
+
+          <!-- Bottom Row: LinkedIn and GitHub -->
+          <div class="contact-row">
+            <a href="https://linkedin.com/in/yucyavuz" target="_blank" class="contact-item">
+              <div class="contact-icon">
+                <i class="fab fa-linkedin"></i>
+              </div>
+              <div class="contact-info">
+                <h4>LinkedIn</h4>
+                <p>linkedin.com/in/yucyavuz</p>
+              </div>
+            </a>
+
+            <a href="https://github.com/yucel-yavuz" target="_blank" class="contact-item">
+              <div class="contact-icon">
+                <i class="fab fa-github"></i>
+              </div>
+              <div class="contact-info">
+                <h4>GitHub</h4>
+                <p>github.com/yucel-yavuz</p>
+              </div>
+            </a>
+          </div>
+        </div>
       </div>
-    </section>
-  </main>
+    </div>
+  </section>
 
-  <!-- typed.js -->
-  <script src="assets/vendor/typed.js/typed.min.js"></script>
-  <script type="text/javascript">
-    var typed = new Typed('.typing',{
-      strings: ["AI Data Scientist", "Generative AI Practitioner", "Machine Learning Specialist", "Data Storyteller"],
-      loop: true,
-      typeSpeed: 80,
-      backSpeed: 40
-    });
-  </script>
+  <!-- Footer -->
+  <footer class="footer">
+    <div class="container">
+      <p>&copy; 2025 Yucel Yavuz. All rights reserved.</p>
+      <p class="footer-tagline">Built with passion for AI and data science</p>
+    </div>
+  </footer>
 
-  <!-- jQuery-->
-  <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.2/jquery.min.js"></script>
-  <!-- Materialize - Compiled and minified JavaScript-->
-  <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/0.95.3/js/materialize.min.js"></script>
-  <script>
-    // Materialize - Initializers
-    $(document).ready(function () {
-      $(".scrollspy").scrollSpy();
-      $(".button-collapse").sideNav({
-        menuWidth: 190,
-        edge: "left",
-        closeOnClick: true
-      });
-    });
-  </script>
+  <!-- Scroll to Top Button -->
+  <button id="scroll-top" class="scroll-top" aria-label="Scroll to top">
+    <i class="fas fa-arrow-up"></i>
+  </button>
+
+  <!-- Custom JavaScript -->
+  <script src="assets/js/main.js"></script>
 </body>
 </html>

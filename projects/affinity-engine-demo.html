@@ -1,1 +1,277 @@
-<!DOC/* Theme sync: default these demos are dark; honor portfolio light mode too */YPE
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<script id="portfolio-theme-sync">
+  (function () {
+    try {
+      var theme = localStorage.getItem('theme') || 'light';
+      var isDark = theme === 'dark';
+      document.documentElement.classList.toggle('dark-mode', isDark);
+    } catch (e) {}
+  })();
+</script>
+<title>AI Product Affinity Engine Demo</title>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700&display=swap" rel="stylesheet">
+<style>
+  *, *::before, *::after { box-sizing: border-box; }
+  body    { font-family: 'Inter', sans-serif; font-size: 11pt;
+             background: #0B1A2B; color: #E6EDF3;
+             padding: 32px 48px 48px; margin: 0; line-height: 1.6; }
+  h1      { font-size: 22pt; color: #E6B84C; margin: 0 0 4px 0; font-weight: 700; }
+  h2      { font-size: 14pt; color: #29D4FF; margin: 0 0 12px 0; font-weight: 600;
+            border-bottom: 1px solid rgba(41,212,255,.2); padding-bottom: 6px; }
+  h3      { font-size: 13pt; color: #FFA366; margin: 0 0 10px 0; font-weight: 600;
+            border-bottom: 1px solid rgba(255,163,102,.2); padding-bottom: 6px; }
+  h4      { font-size: 11.5pt; color: #A0F070; margin: 14px 0 6px 0; font-weight: 600; }
+  p       { font-size: 10.5pt; line-height: 1.65; margin: 0 0 10px 0; }
+  table   { border-collapse: collapse; width: 100%; margin-bottom: 8px; font-size: 10pt; }
+  th      { background: rgba(230,184,76,.12); color: #E6B84C;
+             padding: 7px 10px; text-align: left; font-size: 9.5pt; font-weight: 600; }
+  td      { padding: 6px 10px; border-bottom: 1px solid rgba(255,255,255,.06); font-size: 9.5pt; }
+  tr:hover td { background: rgba(255,255,255,.03); }
+  .header-card {
+    padding: 8px 0 18px; margin-bottom: 22px;
+    text-align: center;
+  }
+  .header-sub { color: #8899aa; font-size: 10pt; margin: 6px 0 0; }
+  .header-sub strong { color: #E6EDF3; }
+  .kpi-row { display: flex; flex-wrap: wrap; justify-content: center;
+             gap: 10px; margin-bottom: 16px; }
+  .kpi    { background: rgba(19,36,58,.8); border: 1px solid rgba(230,184,76,.18);
+             border-radius: 8px; padding: 13px 22px; text-align: center; min-width: 110px; }
+  .kv     { font-size: 18pt; font-weight: 700; color: #E6B84C; }
+  .kl     { font-size: 9.5pt; color: #8899aa; margin-top: 3px; }
+  details.defs {
+    margin-bottom: 24px; border: 1px solid rgba(255,255,255,.08);
+    border-radius: 8px; background: rgba(11,26,43,.5);
+  }
+  details.defs summary {
+    cursor: pointer; padding: 10px 18px; color: #5577aa; font-size: 10pt;
+    font-weight: 600; user-select: none; list-style: none; outline: none;
+  }
+  details.defs summary::-webkit-details-marker { display: none; }
+  details.defs summary:hover { color: #8899aa; }
+  .def-grid {
+    display: grid; grid-template-columns: repeat(3, 1fr);
+    gap: 12px 24px; padding: 14px 20px 18px;
+    border-top: 1px solid rgba(255,255,255,.08);
+  }
+  .def-item strong { color: #E6B84C; display: block; font-size: 9.5pt; margin-bottom: 2px; }
+  .def-item span   { color: #8899aa; font-size: 9pt; line-height: 1.5; }
+  .def-item .formula { display: block; margin-top: 5px; font-family: 'Courier New', monospace;
+                        font-size: 8.5pt; color: #5577aa; background: rgba(0,0,0,.25);
+                        border-left: 2px solid rgba(230,184,76,.3);
+                        padding: 3px 8px; border-radius: 0 4px 4px 0; }
+  .two-col { display: grid; grid-template-columns: 1fr 1fr; gap: 24px; align-items: start; }
+  .sec {
+    background: rgba(11,26,43,.7); border: 1px solid rgba(230,184,76,.15);
+    border-radius: 10px; padding: 20px 24px; margin-bottom: 18px;
+  }
+  .sec:last-child { margin-bottom: 0; }
+  .sec.exec     { border-color: rgba(41,212,255,.35); }
+  .sec.cross    { border-color: rgba(230,184,76,.25); }
+  .sec.insights { border-color: rgba(160,240,112,.25); }
+  .sec.demo     { border-color: rgba(255,163,102,.25); }
+  .sec.inter    { border-color: rgba(255,163,102,.25); }
+  .sec.fin      { border-color: rgba(255,163,102,.25); }
+  .note { color: #8899aa; font-size: 9.5pt; margin-bottom: 10px; }
+  .gold { color: #E6B84C; font-weight: 600; }
+  .red  { color: #D94A38; font-weight: 600; }
+  .footer { color: #5577aa; font-size: 9pt;
+             border-top: 1px solid rgba(255,255,255,.08);
+             padding-top: 14px; margin-top: 28px; text-align: center; }
+
+  body { padding-top: 76px !important; }
+  .portfolio-demo-toolbar {
+    position: fixed; top: 0; left: 0; right: 0; z-index: 99999;
+    height: 56px; display: flex; align-items: center; justify-content: space-between;
+    padding: 0 22px; background: rgba(5, 16, 28, .96);
+    border-bottom: 1px solid rgba(230,184,76,.24); backdrop-filter: blur(10px);
+    font-family: Inter, system-ui, sans-serif;
+  }
+  .portfolio-demo-toolbar strong { color: #E6B84C; font-size: 14px; letter-spacing: .01em; }
+  .portfolio-demo-toolbar .toolbar-actions { display: flex; gap: 10px; align-items: center; }
+  .portfolio-demo-toolbar a, .portfolio-demo-toolbar button {
+    border: 1px solid rgba(41,212,255,.28); background: rgba(41,212,255,.10);
+    color: #E6EDF3; border-radius: 999px; padding: 8px 14px; font-size: 12px;
+    font-weight: 700; text-decoration: none; cursor: pointer; font-family: inherit;
+  }
+  .portfolio-demo-toolbar a:hover, .portfolio-demo-toolbar button:hover {
+    border-color: rgba(230,184,76,.65); color: #E6B84C;
+  }
+
+  /* Theme sync: these demos default to dark; honor portfolio light mode too */
+  html:not(.dark-mode) body {
+    background: #f7f9fc !important;
+    color: #1b2b34 !important;
+  }
+  html:not(.dark-mode) h1 { color: #0d394e !important; }
+  html:not(.dark-mode) h2, html:not(.dark-mode) .feature-action { color: #0d394e !important; }
+  html:not(.dark-mode) h3 { color: #1a5570 !important; }
+  html:not(.dark-mode) p, html:not(.dark-mode) li, html:not(.dark-mode) td { color: #2c3e50 !important; }
+  html:not(.dark-mode) .sec, html:not(.dark-mode) .feature-card, html:not(.dark-mode) details.defs {
+    background: #ffffff !important;
+    border-color: rgba(13,57,78,0.14) !important;
+  }
+  html:not(.dark-mode) th {
+    background: rgba(13,57,78,0.06) !important;
+    color: #0d394e !important;
+  }
+  html:not(.dark-mode) td { border-bottom-color: rgba(13,57,78,0.10) !important; }
+  html:not(.dark-mode) .portfolio-demo-toolbar {
+    background: rgba(255,255,255,0.92) !important;
+    border-bottom-color: rgba(13,57,78,0.16) !important;
+  }
+  html:not(.dark-mode) .portfolio-demo-toolbar strong { color: #0d394e !important; }
+  html:not(.dark-mode) .portfolio-demo-toolbar a, html:not(.dark-mode) .portfolio-demo-toolbar button {
+    background: rgba(13,57,78,0.06) !important;
+    border-color: rgba(13,57,78,0.18) !important;
+    color: #0d394e !important;
+  }</style>
+</head>
+<body>
+<div class="portfolio-demo-toolbar">
+  <strong>AI Product Affinity Engine Demo</strong>
+  <div class="toolbar-actions">
+    <a href="../index.html#projects">Back to Portfolio</a>
+    <button type="button" onclick="document.documentElement.requestFullscreen && document.documentElement.requestFullscreen()">Open Full Screen</button>
+  </div>
+</div>
+<div style="position:fixed;top:0;left:0;right:0;height:4px;background:linear-gradient(90deg,#29D4FF,#E6B84C);animation:slide 6s linear infinite;z-index:9999"></div><style>@keyframes slide{0%{transform:translateX(-100%)}100%{transform:translateX(100%)}} body{animation:autoScroll 60s linear infinite alternate;} @keyframes autoScroll{0%{transform:translateY(0)}100%{transform:translateY(-120px)}}</style>
+
+<div class="header-card">
+  <h1>Consumer Brand Product Affinity Engine</h1>
+  <p class="header-sub">
+    CATEGORY = <strong>Product Category A</strong>
+    &nbsp;|&nbsp; 2026 to 2026
+    &nbsp;|&nbsp; 4 cross-sell pairs
+  </p>
+</div>
+
+<div class="kpi-row">
+  <div class="kpi"><div class="kv">41,134</div><div class="kl">Basket Pool</div></div>
+  <div class="kpi"><div class="kv">6,060</div><div class="kl">Target Buyers</div></div>
+  <div class="kpi"><div class="kv">2,170</div><div class="kl">Multi-Buyers</div></div>
+  <div class="kpi"><div class="kv">13.03x</div><div class="kl">Top Lift</div></div>
+  <div class="kpi"><div class="kv">69%</div><div class="kl">Identity Match</div></div>
+</div>
+
+<details class="defs">
+  <summary>&#9658; Metric Definitions</summary>
+  <div class="def-grid">
+    <div class="def-item">
+      <strong>Basket Pool</strong>
+      <span>Total unique customers who made any Consumer Brand purchase in the selected date range &mdash; the universe from which all analysis is drawn.</span>
+    </div>
+    <div class="def-item">
+      <strong>Target Buyers</strong>
+      <span>Customers who purchased Product Category A at least once in the period.</span>
+    </div>
+    <div class="def-item">
+      <strong>Multi-Buyers</strong>
+      <span>Target buyers who also purchased at least one other Consumer Brand product &mdash; the source population for cross-sell rule mining.</span>
+    </div>
+    <div class="def-item">
+      <strong>Top Lift</strong>
+      <span>The highest lift value across all generated association rules. Shows the strongest co-purchase affinity found in the data.</span>
+    </div>
+    <div class="def-item">
+      <strong>Lift</strong>
+      <span>How much more likely a target buyer is to purchase the recommended product compared to a random Consumer Brand customer. Lift &gt; 1.0 = positive affinity; Lift = 1.0 = no relationship.</span>
+      <span class="formula">Lift = Confidence(A&rarr;B) &divide; P(B)<br>     = [Co-Buyers &divide; Target Buyers] &divide; [Rec. Customers &divide; Basket Pool]</span>
+    </div>
+    <div class="def-item">
+      <strong>Confidence</strong>
+      <span>Of all customers who bought the target product, what share also bought the recommended product? Directly measures the attach rate &mdash; how often the cross-sell actually happens.</span>
+      <span class="formula">Confidence(A&rarr;B) = Co-Buyers &divide; Target Buyers</span>
+    </div>
+    <div class="def-item">
+      <strong>Support</strong>
+      <span>Of all customers in the basket pool, what share bought both products together? Measures the absolute co-purchase volume &mdash; a low support with high lift means a niche but very strong signal.</span>
+      <span class="formula">Support(A&rarr;B) = Co-Buyers &divide; Basket Pool</span>
+    </div>
+    <div class="def-item">
+      <strong>Co-Buyers</strong>
+      <span>Number of customers who purchased both the target and the recommended product in the period.</span>
+    </div>
+    <div class="def-item">
+      <strong>Recommended Customers</strong>
+      <span>Total customers who purchased the recommended product in the period.</span>
+    </div>
+  </div>
+</details>
+
+<div class="two-col">
+
+  <div class="col-left">
+
+    <div class="sec exec">
+      <h2>Executive Summary</h2>
+      <p>The strongest cross-sell signal is <strong>Product Category A â†’ Product Category B</strong> with <strong>13.03x lift</strong> (buyers are far more likely than average to also purchase <strong>Product Category B</strong>), making it the clearest attach opportunity. The audience skews <strong>affluent women 25â€“54</strong> (especially <strong>Female 25â€“34 index 2.04</strong> and <strong>Female 35â€“44 index 2.00</strong>) with notable <strong>Hispanic (index 1.43)</strong> and <strong>Veteran (index 1.40)</strong> over-indexing. Recommended action: launch a post-purchase and retargeting â€œProduct Category A Essentialsâ€ offer bundling <strong>Product Category B</strong> (primary) and <strong>Product Category D</strong> (secondary) with audience targeting weighted to high-income female 25â€“54 segments.</p>
+    </div>
+
+    <div class="sec cross">
+      <h2>Cross-Sell Recommendations</h2>
+      <table>
+        <tr><th>#</th><th>Recommended Product</th><th>Lift</th>
+            <th>Confidence</th><th>Support</th><th>Co-Buyers</th><th>Recommended Customers</th></tr>
+        <tr><td>1</td><td>Product Category B</td><td>13.03x</td><td>20%</td><td>1.1%</td><td>435</td><td>633</td></tr><tr><td>2</td><td>Product Category C</td><td>11.04x</td><td>5%</td><td>0.3%</td><td>106</td><td>182</td></tr><tr><td>3</td><td>Product Category D</td><td>4.93x</td><td>6%</td><td>0.3%</td><td>131</td><td>504</td></tr><tr><td>4</td><td>Product Category E</td><td>1.44x</td><td>5%</td><td>0.3%</td><td>104</td><td>1,365</td></tr>
+      </table>
+    </div>
+
+    <div class="sec insights">
+      <h3>Business Insights</h3>
+      <h4>Cross-Sell Insights</h4>
+      <p>The standout rule is <strong>Product Category B</strong>: <strong>13.03x lift</strong> with <strong>20% confidence</strong> and <strong>0.011 support</strong>. In business terms, while only a small share of all Product Category A buyers are in this combined purchase pattern (support), when the pattern occurs itâ€™s meaningfully repeatable (confidence), and it happens at a rate dramatically higher than in the general customer base (lift). This is the best â€œattachâ€ candidate because itâ€™s both highly differentiated and comparatively more common than the other rules.<br><br>The next strongest lift signalsâ€”<strong>Product Category C</strong> (<strong>11.04x lift</strong>, <strong>5% confidence</strong>, <strong>0.003 support</strong>) and <strong>Product Category D</strong> (<strong>4.93x lift</strong>, <strong>6% confidence</strong>, <strong>0.003 support</strong>)â€”are smaller in scale but strategically valuable. <strong>Product Category C</strong> suggests a subset of Product Category A buyers are quickly moving into accessories/replacements, which can indicate either heavy usage (good for lifetime value) or early troubleshooting (good for proactive care content). <strong>Product Category D</strong> indicates a â€œkitchen system builderâ€ behavior: customers expanding into adjacent cooking appliances rather than staying single-device.<br><br><strong>Product Category E</strong> shows <strong>1.44x lift</strong> with <strong>5% confidence</strong> (<strong>0.003 support</strong>), which is a weaker affinityâ€”more â€œnice to haveâ€ than a core attach. The surprising/high-value combination is the strength of <strong>Product Category B</strong> relative to other appliances: it implies Product Category A purchase is often part of a broader kitchen upgrade moment (tools + appliance), so merchandising should lean into â€œcomplete the setupâ€ rather than only â€œadd another appliance.â€</p>
+      <h4>Audience Targeting Strategy</h4>
+      <p>Product Category A buyers over-index most strongly among <strong>women 25â€“54</strong>, led by <strong>Female 25â€“34 (index 2.04)</strong> and <strong>Female 35â€“44 (index 2.00)</strong>, with additional strength in <strong>Age 35â€“44 (index 1.68)</strong> and <strong>Female 45â€“54 (index 1.65)</strong>. They also skew affluent (<strong>Income Over U$200,000 index 1.51</strong>) and include meaningful pockets of <strong>Hispanic (index 1.43)</strong> and <strong>Veteran Status: Yes (index 1.40)</strong>. Practically, this is a prime â€œbusy household optimizerâ€ segment: time-saving cooking plus willingness to invest in quality tools.<br><br>Interest signals reinforce an active, lifestyle-driven profile: <strong>Hobby Board Games (index 1.64)</strong>, <strong>Snow Skiing (index 1.49)</strong>, <strong>Tennis (index 1.45)</strong>, and <strong>Reading Fashion (index 1.42)</strong>. Creative should therefore emphasize social hosting and â€œweeknight-to-weekendâ€ versatilityâ€”quick meals for busy schedules, plus elevated presentation for gatherings. Position <strong>Product Category B</strong> as the upgrade that makes prep faster and results more â€œrestaurant-level,â€ aligning with premium lifestyle cues.<br><br>Finance attributes show strong responsiveness and purchasing power: <strong>Young Consumers Likely to Apply for a Mortgage (index 2.44)</strong>, <strong>High Income Mortgage (index 2.39)</strong>, and <strong>High Income Respond to Credit Card Offer (index 2.22)</strong>. This supports testing premium bundles and financing-friendly messaging (e.g., â€œcomplete your kitchen setupâ€) while suppressing low-propensity segments like <strong>Female 18â€“24 (index 0.34)</strong> and <strong>Over 75 (index 0.12)</strong>, plus very low <strong>DIVERSITY DIV: 80â€“100% (index 0.05)</strong> where performance is likely to be inefficient.</p>
+      <h4>Media &amp; Campaign Suggestions</h4>
+      <p>Prioritize addressable and programmatic tactics that can quickly activate the <strong>69% Identity match rate</strong> for retargeting and sequential messaging. Run dynamic product ads to recent Product Category A purchasers with a 3-step sequence: (1) â€œGet more from your Product Category Aâ€ (recipes), (2) â€œUpgrade your prepâ€ featuring <strong>Product Category B</strong>, (3) â€œExpand your kitchen systemâ€ featuring <strong>Product Category D</strong>. Use suppression lists for under-indexed age groups (notably <strong>18â€“24</strong> and <strong>75+</strong>) to protect efficiency.<br><br>On social, lean into short-form video (Reels/TikTok/YouTube Shorts) and creator-style content that matches the audienceâ€™s lifestyle signals: â€œgame night snacks in 15 minutes,â€ â€œtennis-practice dinner prep,â€ and â€œski-weekend meal shortcuts.â€ Pair these with shoppable formats and carousel units that explicitly bundle <strong>Product Category A + Product Category B</strong> as an â€œEssentials Kit,â€ and test Spanish-language variants and culturally relevant recipe angles for the <strong>Hispanic (index 1.43)</strong> segment.<br><br>For bundling and onsite merchandising, make <strong>Product Category B</strong> the default attach: â€œFrequently bought with <strong>Product Category A</strong>â€ placements, cart add-ons, and post-purchase email/SMS within 7â€“14 days (when excitement and usage are highest). Create two bundle tiers: (1) â€œEssentialsâ€ (<strong>Product Category B</strong>) and (2) â€œKitchen Upgradeâ€ (<strong>Product Category B + Product Category D</strong>), with a smaller, targeted service-oriented path for <strong>Product Category C</strong> buyers (how-to content, warranty/support prompts, and accessory recommendations) to convert potential friction into loyalty and repeat purchase.</p>
+    </div>
+
+  </div>
+
+  <div class="col-right">
+
+    <div class="sec demo">
+      <h3>Audience Profile &mdash; Demographics</h3>
+      <p class="note">Index = target % / population %, identity-graph weighted. &nbsp;
+        <span class="gold">Gold &ge; 1.20</span> &middot; Neutral 1.00&ndash;1.19 &middot;
+        <span class="red">Red &lt; 1.00</span> &middot;
+        4,186 of 6,060 matched (69%)
+      </p>
+      <table>
+        <tr><th>Attribute</th><th>Value</th><th>Index</th></tr>
+        <tr><td>AGESEX_CAT</td><td>Female: 25 to 34</td><td class='gold'>2.04</td></tr><tr><td>AGESEX_CAT</td><td>Female: 35 to 44</td><td class='gold'>2.00</td></tr><tr><td>AGE_CAT</td><td>Age: 35 to 44</td><td class='gold'>1.68</td></tr><tr><td>AGESEX_CAT</td><td>Female: 45 to 54</td><td class='gold'>1.65</td></tr><tr><td>AGE_CAT</td><td>Age: 25 to 34</td><td class='gold'>1.58</td></tr><tr><td>INCOME_CAT</td><td>Over U$200,000</td><td class='gold'>1.51</td></tr><tr><td>HISPAN_CAT</td><td>Hispanic</td><td class='gold'>1.43</td></tr><tr><td>VET_CAT</td><td>Veteran Status: Yes</td><td class='gold'>1.40</td></tr><tr><td>AGE_CAT</td><td>Age: 45 to 54</td><td class='gold'>1.38</td></tr><tr><td>AGESEX_CAT</td><td>Male: 35 to 44</td><td class='gold'>1.36</td></tr><tr><td>DIVERSITY</td><td>DIV: 80-100%</td><td class='red'>0.05</td></tr><tr><td>AGESEX_CAT</td><td>Female: Over 75</td><td class='red'>0.12</td></tr><tr><td>AGE_CAT</td><td>Age: Over 75</td><td class='red'>0.12</td></tr><tr><td>AGESEX_CAT</td><td>Male: Over 75</td><td class='red'>0.12</td></tr><tr><td>AGESEX_CAT</td><td>Female: 18 to 24</td><td class='red'>0.34</td></tr>
+      </table>
+    </div>
+
+    <div class="sec inter">
+      <h3>Audience Profile &mdash; Interests</h3>
+      <p class="note"><span class="gold">Gold &ge; 1.20</span> &middot; <span class="red">Red &lt; 1.00</span></p>
+      <table>
+        <tr><th>Interest</th><th>Index</th></tr>
+        <tr><td>Hobby Board Games</td><td class='gold'>1.64</td></tr><tr><td>Snow Skiing</td><td class='gold'>1.49</td></tr><tr><td>Tennis</td><td class='gold'>1.45</td></tr><tr><td>Reading Fashion</td><td class='gold'>1.42</td></tr><tr><td>Hobby Cigar Smoking</td><td class='gold'>1.41</td></tr><tr><td>Children Interests</td><td class='gold'>1.38</td></tr><tr><td>Toys</td><td class='gold'>1.36</td></tr><tr><td>Family</td><td class='gold'>1.36</td></tr><tr><td>Reading Children Stories</td><td class='gold'>1.36</td></tr><tr><td>Hobby Video Games</td><td class='gold'>1.35</td></tr><tr><td>Reading Computer</td><td class='red'>0.42</td></tr><tr><td>Reading Country Lifestyle</td><td class='red'>0.42</td></tr><tr><td>Contribute Political Liberal</td><td class='red'>0.49</td></tr><tr><td>Reading Military</td><td class='red'>0.76</td></tr><tr><td>Reading History</td><td class='red'>0.77</td></tr>
+      </table>
+    </div>
+
+    <div class="sec fin">
+      <h3>Audience Profile &mdash; Finance</h3>
+      <p class="note"><span class="gold">Gold &ge; 1.20</span> &middot; <span class="red">Red &lt; 1.00</span></p>
+      <table>
+        <tr><th>Finance Attribute</th><th>Index</th></tr>
+        <tr><td>Young Consumers Likely to Apply for a Mortgage Loan</td><td class='gold'>2.44</td></tr><tr><td>High Income Most Likely to Apply for a Mortgage Loan</td><td class='gold'>2.39</td></tr><tr><td>High Income Most Likely to Respond to a Credit Card Offer</td><td class='gold'>2.22</td></tr><tr><td>High Income Most Likely to Apply for an Auto Loan</td><td class='gold'>2.21</td></tr><tr><td>Females Most Likely to Apply for an Auto Loan</td><td class='gold'>2.08</td></tr><tr><td>Highest Outstanding Mortgage Balance</td><td class='gold'>2.08</td></tr><tr><td>High Card Spenders</td><td class='gold'>2.01</td></tr><tr><td>Most Likely to Apply for a Mortgage Loan</td><td class='gold'>2.00</td></tr><tr><td>High # of Active Credit Cards</td><td class='gold'>1.94</td></tr><tr><td>High Income Most Likely to Apply for a Home Equity Loan</td><td class='gold'>1.81</td></tr><tr><td>Low Card Spenders</td><td class='red'>0.51</td></tr><tr><td>Auto Insurance Most Likely to File a Claim</td><td class='red'>0.51</td></tr><tr><td>Low # of Active Credit Cards</td><td class='red'>0.60</td></tr><tr><td>Lowest Life Insurance Loyalty</td><td class='red'>0.66</td></tr><tr><td>Decrease in Year-Over-Year Spend over 12-Months</td><td class='red'>0.68</td></tr>
+      </table>
+    </div>
+
+  </div>
+
+</div>
+
+<div class="footer">
+  AI-generated content &mdash; please review before use &nbsp;|&nbsp; Consumer Brand Product Affinity Engine
+</div>
+
+</body>
+</html>

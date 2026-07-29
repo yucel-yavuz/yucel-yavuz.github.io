@@ -85,53 +85,6 @@ themeToggle.addEventListener('click', () => {
 });
 
 // ========================================
-// TYPING ANIMATION
-// ========================================
-
-const typingText = document.querySelector('.typing-text');
-const phrases = [
-  'AI Data Scientist',
-  'Generative AI Practitioner',
-  'Machine Learning Specialist',
-  'Data Storyteller',
-  'LLM Expert'
-];
-
-let phraseIndex = 0;
-let charIndex = 0;
-let isDeleting = false;
-let typingSpeed = 100;
-
-function type() {
-  const currentPhrase = phrases[phraseIndex];
-
-  if (isDeleting) {
-    typingText.textContent = currentPhrase.substring(0, charIndex - 1);
-    charIndex--;
-    typingSpeed = 50;
-  } else {
-    typingText.textContent = currentPhrase.substring(0, charIndex + 1);
-    charIndex++;
-    typingSpeed = 100;
-  }
-
-  if (!isDeleting && charIndex === currentPhrase.length) {
-    // Pause at end of phrase
-    typingSpeed = 2000;
-    isDeleting = true;
-  } else if (isDeleting && charIndex === 0) {
-    isDeleting = false;
-    phraseIndex = (phraseIndex + 1) % phrases.length;
-    typingSpeed = 500;
-  }
-
-  setTimeout(type, typingSpeed);
-}
-
-// Start typing animation
-setTimeout(type, 1000);
-
-// ========================================
 // ANIMATED COUNTERS
 // ========================================
 
@@ -300,7 +253,7 @@ function createParticles() {
   const particlesContainer = document.querySelector('.particles-container');
   if (!particlesContainer) return;
 
-  const particleCount = 50;
+  const particleCount = 18;
 
   for (let i = 0; i < particleCount; i++) {
     const particle = document.createElement('div');
@@ -403,9 +356,9 @@ if (contactForm) {
 // CONSOLE MESSAGE
 // ========================================
 
-console.log('%c👋 Hi there!', 'font-size: 20px; font-weight: bold; color: #0d394e;');
+console.log('%cðŸ‘‹ Hi there!', 'font-size: 20px; font-weight: bold; color: #0d394e;');
 console.log('%cInterested in the code? Check out the repository!', 'font-size: 14px; color: #546e7a;');
-console.log('%c🔗 https://github.com/yucel-yavuz', 'font-size: 14px; color: #00bcd4;');
+console.log('%cðŸ”— https://github.com/yucel-yavuz', 'font-size: 14px; color: #00bcd4;');
 
 // ========================================
 // PERFORMANCE MONITORING
@@ -417,7 +370,9 @@ if (window.performance) {
     setTimeout(() => {
       const perfData = window.performance.timing;
       const pageLoadTime = perfData.loadEventEnd - perfData.navigationStart;
-      console.log(`⚡ Page loaded in ${pageLoadTime}ms`);
+      console.log(`Page loaded in ${pageLoadTime}ms`);
     }, 0);
   });
 }
+
+
